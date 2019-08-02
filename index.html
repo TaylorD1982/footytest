@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/style.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>Football Group</title>
+    <link rel="icon" type="image/ico" href="assets/images/w.png" />
+
+</head>
+
+<body>
+
+    <!–– Header ––>
+
+    <div class="mobileShow">
+        <img width="100%" src="assets/images/Banner.png" alt="The Weavers">
+    </div>
+
+    <div class="mobileHide">
+        <img width="100%" src="assets/images/BannerDesktop.png" alt="The Weavers">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/milestone1/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#C4">Player Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#C5">Group Statistics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#C6">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!–– Body ––>
+
+    <table class="table table-bordered" align="center">
+        <thead>
+            <tr class="table-heading">
+                <th scope="col">Position</th>
+                <th scope="col">Player</th>
+                <th scope="col">Winnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>David</td>
+                <td>£39.23</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>William</td>
+                <td>£29.23</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Al</td>
+                <td>£19.23</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Craig</td>
+                <td>£15.23</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Struan</td>
+                <td>£8.23</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Duffy</td>
+                <td>£2.23</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="map"></div>
+
+    <div class="mobileHide">
+        <img width="100%" src="assets/images/player.png" alt="Player Information" id="C4">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" id="myBtn" class="btn btn-outline-warning">David</button>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div>
+
+                        <h1>Average odds</h1>
+                        <p id="demo"></p>
+                        <h1>Average odds</h1>
+                        <p id="demo1"></p>
+                        <h1>Average odds</h1>
+                        <p id="demo2"></p>
+
+                        <script>
+                            var cars = ["Saab", "33/1", "BMW"];
+                            document.getElementById("demo").innerHTML = cars[1];
+                            document.getElementById("demo1").innerHTML = cars[2];
+                            document.getElementById("demo2").innerHTML = cars[0];
+                        </script>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <button type="button" id="myBtn1" class="btn btn-outline-warning">Bingham</button>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div>
+
+                        <h1>Average odds</h1>
+                        <p id="demoA"></p>
+                        <h1>Average odds</h1>
+                        <p id="demoB"></p> 
+                        <h1>Average odds</h1>
+                        <p id="demoC"></p>
+
+                        <script>
+                            var bingham = ["Saab", "44/1", "BMW"];
+                            document.getElementById("demoA").innerHTML = bingham[1];
+                            document.getElementById("demoB").innerHTML = bingham[2];
+                            document.getElementById("demoC").innerHTML = bingham[0];
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+                <div class="col">
+                    <button type="button" class="btn btn-outline-warning">Alistair</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-outline-warning">Struan</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-outline-warning">William</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-outline-warning">Duffy</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobileHide">
+            <img width="100%" src="assets/images/Group.png" alt="Group Statistics" id="C5">
+        </div>
+
+        <div class="mobileHide">
+            <img width="100%" src="assets/images/player.png" alt="Player Information" id="C6">
+        </div>
+
+        <form class="was-validated">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" name="exampleInputEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="Textarea">Message</label>
+                <textarea class="form-control" id="Textarea" rows="10" placeholder="Please write your message in here" name="Textarea" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">
+            <img width="30%" src="assets/images/Banner.png" alt="Send Message">
+        </button>
+        </form>
+
+        <!–– Footer ––>
+
+        <section class="quotes">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <blockquote class="blockquote">
+                            <img width="65%" src="assets/images/BannerDesktop.png" alt="The Weavers">
+                        </blockquote>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <blockquote class="blockquote">
+                            <p>If you would like to receive a no obligation quote, please click below.</p>
+                            <button type="button" class="btn btn-default" onclick="location.href='/booking.html'">Get a free quote</button>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap" async defer></script>
+
+// David's button
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+// Bingham's button
+
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</html>

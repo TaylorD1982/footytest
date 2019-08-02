@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="assets/new.js"></script>
+</head>
+
+<body>
+
+  <div>
+
+    <h1>Average odds</h1>
+    <p id="demo"></p>
+    <h1>Average odds</h1>
+    <p id="demo1"></p>
+    <h1>Average odds</h1>
+    <p id="demo2"></p>
+
+    <script>
+      var cars = ["Saab", "33/1", "BMW"];
+      document.getElementById("demo").innerHTML = cars[1];
+      document.getElementById("demo1").innerHTML = cars[2];
+      document.getElementById("demo2").innerHTML = cars[0];
+    </script>
+
+  </div>
+
+  <div>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <script>
+      var cars = ["Saab", "Cow", "BMW"];
+      document.getElementById("demo4").innerHTML = cars[1];
+      document.getElementById("demo5").innerHTML = cars[2];
+      document.getElementById("demo6").innerHTML = cars[0];
+    </script>
+
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+    var modal = document.getElementById("myModal1");
+    var btn = document.getElementById("myBtn1");
+    var span = document.getElementsByClassName("close1")[0];
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+            <!-- The Modal -->
+            <div id="myModal1" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close1">&times;</span>
+                    <div>
+
+                        <h1>Average odds</h1>
+                        <p id="demoA"></p>
+                        <h1>Average odds</h1>
+                        <p id="demoB"></p>
+                        <h1>Average odds</h1>
+                        <p id="demoC"></p>
+
+                        <script>
+                            var bingham = ["Saab", "44/1", "BMW"];
+                            document.getElementById("demoA").innerHTML = bingham[1];
+                            document.getElementById("demoB").innerHTML = bingham[2];
+                            document.getElementById("demoC").innerHTML = bingham[0];
+                        </script>
+
+                    </div>
+                </div>
+            </div>
