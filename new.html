@@ -1,92 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <script type="text/javascript" src="assets/new.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/new.css" type="text/css">
 </head>
 
 <body>
 
-  <div>
+    <button><a href="#openModal1">Box 1</a></button>
 
-    <h1>Average odds</h1>
-    <p id="demo"></p>
-    <h1>Average odds</h1>
-    <p id="demo1"></p>
-    <h1>Average odds</h1>
-    <p id="demo2"></p>
+    <div id="openModal1" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>2018 / 2019 Statistics</h2>
+            <h1>Average odds</h1>
+            <p id="demo"></p>
+            <h1>Highest position</h1>
+            <p id="demo1"></p>
+            <h1>Total Profit</h1>
+            <p id="demo2"></p>
 
-    <script>
-      var cars = ["Saab", "33/1", "BMW"];
-      document.getElementById("demo").innerHTML = cars[1];
-      document.getElementById("demo1").innerHTML = cars[2];
-      document.getElementById("demo2").innerHTML = cars[0];
-    </script>
+            <script>
+                var cars = ["3.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                document.getElementById("demo").innerHTML = cars[0];
+                document.getElementById("demo1").innerHTML = cars[1];
+                document.getElementById("demo2").innerHTML = cars[2];
+            </script>
+        </div>
+    </div>
+    <button><a href="#openModal2">Box 2</a></button>
 
-  </div>
+    <div id="openModal2" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Modal Box 2</h2>
+            <h1>Average odds</h1>
+            <p id="demoA"></p>
+            <h1>Average odds</h1>
+            <p id="demoB"></p>
+            <h1>Average odds</h1>
+            <p id="demoC"></p>
 
-  <div>
-
-    <p id="demo4"></p>
-    <p id="demo5"></p>
-    <p id="demo6"></p>
-
-    <script>
-      var cars = ["Saab", "Cow", "BMW"];
-      document.getElementById("demo4").innerHTML = cars[1];
-      document.getElementById("demo5").innerHTML = cars[2];
-      document.getElementById("demo6").innerHTML = cars[0];
-    </script>
-
-  </div>
+            <script>
+                var bingham = ["Saab", "44/1", "BMW"];
+                document.getElementById("demoA").innerHTML = bingham[1];
+                document.getElementById("demoB").innerHTML = bingham[2];
+                document.getElementById("demoC").innerHTML = bingham[0];
+            </script>
+        </div>
 
 </body>
 
 </html>
-
-
-<script>
-    var modal = document.getElementById("myModal1");
-    var btn = document.getElementById("myBtn1");
-    var span = document.getElementsByClassName("close1")[0];
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-
-
-            <!-- The Modal -->
-            <div id="myModal1" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close1">&times;</span>
-                    <div>
-
-                        <h1>Average odds</h1>
-                        <p id="demoA"></p>
-                        <h1>Average odds</h1>
-                        <p id="demoB"></p>
-                        <h1>Average odds</h1>
-                        <p id="demoC"></p>
-
-                        <script>
-                            var bingham = ["Saab", "44/1", "BMW"];
-                            document.getElementById("demoA").innerHTML = bingham[1];
-                            document.getElementById("demoB").innerHTML = bingham[2];
-                            document.getElementById("demoC").innerHTML = bingham[0];
-                        </script>
-
-                    </div>
-                </div>
-            </div>

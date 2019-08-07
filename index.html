@@ -109,180 +109,212 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button type="button" id="myBtn" class="btn btn-outline-warning">David</button>
-            </div>
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
+                <button type="button" class="btn btn-outline-warning"><a href="#openModalwill">William</a></button>
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
+                <div id="openModalwill" class="modalDialog">
                     <div>
+                        <a href="#close" title="Close" class="close">X</a>
 
-                        <h1>Average odds</h1>
-                        <p id="demo"></p>
-                        <h1>Average odds</h1>
-                        <p id="demo1"></p>
-                        <h1>Average odds</h1>
-                        <p id="demo2"></p>
+                        <section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h1>2018 / 2019 Statistics</h1>
+                                            <h2>Average odds</h2>
+                                            <p id="willStats1"></p>
+                                            <h2>Highest position</h2>
+                                            <p id="willStats2"></p>
+                                            <h2>Total Profit</h2>
+                                            <p id="willStats3"></p>
+                                        </blockquote>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h1>All Time Statistics</h1>
+                                            <h2>Total Winnings</h2>
+                                            <p id="willStats4"></p>
+                                            <h2>Highest Finish</h2>
+                                            <p id="willStats5"></p>
+                                            <h2>Trophies Won</h2>
+                                            <p id="willStats6"></p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                         <script>
-                            var cars = ["Saab", "33/1", "BMW"];
-                            document.getElementById("demo").innerHTML = cars[1];
-                            document.getElementById("demo1").innerHTML = cars[2];
-                            document.getElementById("demo2").innerHTML = cars[0];
+                            var will = ["9.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "-£34.75 (5th overall)", "-£34.75 (5th overall)", "-£34.75 (5th overall)"];
+                            document.getElementById("willStats1").innerHTML = will[0];
+                            document.getElementById("willStats2").innerHTML = will[1];
+                            document.getElementById("willStats3").innerHTML = will[2];
+                            document.getElementById("willStats4").innerHTML = will[3];
+                            document.getElementById("willStats5").innerHTML = will[4];
+                            document.getElementById("willStats6").innerHTML = will[5];
                         </script>
-
                     </div>
                 </div>
+
+
 
             </div>
 
             <div class="col">
-                <button type="button" id="myBtn1" class="btn btn-outline-warning">Bingham</button>
-            </div>
+                <button type="button" class="btn btn-outline-warning"><a href="#openModalAlastair">Alastair</a></button>
 
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
+                <div id="openModalAlastair" class="modalDialog">
                     <div>
-
-                        <h1>Average odds</h1>
-                        <p id="demoA"></p>
-                        <h1>Average odds</h1>
-                        <p id="demoB"></p> 
-                        <h1>Average odds</h1>
-                        <p id="demoC"></p>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h1>2018 / 2019 Statistics</h1>
+                        <h2>Average odds</h2>
+                        <p id="alStats1"></p>
+                        <h2>Highest position</h2>
+                        <p id="alStats2"></p>
+                        <h2>Total Profit</h2>
+                        <p id="alStats3"></p>
 
                         <script>
-                            var bingham = ["Saab", "44/1", "BMW"];
-                            document.getElementById("demoA").innerHTML = bingham[1];
-                            document.getElementById("demoB").innerHTML = bingham[2];
-                            document.getElementById("demoC").innerHTML = bingham[0];
+                            var al = ["8.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                            document.getElementById("alStats1").innerHTML = al[1];
+                            document.getElementById("alStats2").innerHTML = al[2];
+                            document.getElementById("alStats3").innerHTML = al[0];
                         </script>
-
                     </div>
                 </div>
             </div>
 
-                <div class="col">
-                    <button type="button" class="btn btn-outline-warning">Alistair</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button type="button" class="btn btn-outline-warning">Struan</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-outline-warning">William</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-outline-warning">Duffy</button>
+
+
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning"><a href="#openModalDavid">David</a></button>
+
+                <div id="openModalDavid" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h1>2018 / 2019 Statistics</h1>
+                        <h2>Average odds</h2>
+                        <p id="davidStats1"></p>
+                        <h2>Highest position</h2>
+                        <p id="davidStats2"></p>
+                        <h2>Total Profit</h2>
+                        <p id="davidStats3"></p>
+
+                        <script>
+                            var david = ["3.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                            document.getElementById("davidStats1").innerHTML = david[0];
+                            document.getElementById("davidStats2").innerHTML = david[1];
+                            document.getElementById("davidStats3").innerHTML = david[2];
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning"><a href="#openModalStruan">Struan</a></button>
 
-        <div class="mobileHide">
-            <img width="100%" src="assets/images/Group.png" alt="Group Statistics" id="C5">
+                <div id="openModalStruan" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h1>2018 / 2019 Statistics</h1>
+                        <h2>Average odds</h2>
+                        <p id="struanStats1"></p>
+                        <h2>Highest position</h2>
+                        <p id="struanStats2"></p>
+                        <h2>Total Profit</h2>
+                        <p id="struanStats3"></p>
+
+                        <script>
+                            var struan = ["6.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                            document.getElementById("struanStats1").innerHTML = struan[1];
+                            document.getElementById("struanStats2").innerHTML = struan[2];
+                            document.getElementById("struanStats3").innerHTML = struan[0];
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning"><a href="#openModalBingham">Bingham</a></button>
+
+                <div id="openModalBingham" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h1>2018 / 2019 Statistics</h1>
+                        <h2>Average odds</h2>
+                        <p id="binghamStats1"></p>
+                        <h2>Highest position</h2>
+                        <p id="binghamStats2"></p>
+                        <h2>Total Profit</h2>
+                        <p id="binghamStats3"></p>
+
+                        <script>
+                            var bingham = ["4.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                            document.getElementById("binghamStats1").innerHTML = bingham[1];
+                            document.getElementById("binghamStats2").innerHTML = bingham[2];
+                            document.getElementById("binghamStats3").innerHTML = bingham[0];
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-warning"><a href="#openModalDuffy">Duffy</a></button>
+
+                <div id="openModalDuffy" class="modalDialog">
+                    <div>
+                        <a href="#close" title="Close" class="close">X</a>
+                        <h1>2018 / 2019 Statistics</h1>
+                        <h2>Average odds</h2>
+                        <p id="duffyStats1"></p>
+                        <h2>Highest position</h2>
+                        <p id="duffyStats2"></p>
+                        <h2>Total Profit</h2>
+                        <p id="duffyStats3"></p>
+
+                        <script>
+                            var duffy = ["7.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                            document.getElementById("duffyStats1").innerHTML = duffy[1];
+                            document.getElementById("duffyStats2").innerHTML = duffy[2];
+                            document.getElementById("duffyStats3").innerHTML = duffy[0];
+                        </script>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <div class="mobileHide">
-            <img width="100%" src="assets/images/player.png" alt="Player Information" id="C6">
+    <div class="mobileHide">
+        <img width="100%" src="assets/images/group1.png" alt="Group Statistics" id="C5">
+    </div>
+
+    <div class="mobileHide">
+        <img width="100%" src="assets/images/contact.png" alt="Player Information" id="C6">
+    </div>
+
+    <form class="was-validated">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
         </div>
-
-        <form class="was-validated">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" name="exampleInputEmail" required>
-            </div>
-            <div class="form-group">
-                <label for="Textarea">Message</label>
-                <textarea class="form-control" id="Textarea" rows="10" placeholder="Please write your message in here" name="Textarea" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-default">
+        <div class="form-group">
+            <label for="exampleInputEmail">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" name="exampleInputEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="Textarea">Message</label>
+            <textarea class="form-control" id="Textarea" rows="10" placeholder="Please write your message in here" name="Textarea" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">
             <img width="30%" src="assets/images/Banner.png" alt="Send Message">
         </button>
-        </form>
+    </form>
 
-        <!–– Footer ––>
+    <!–– Footer ––>
 
-        <section class="quotes">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <blockquote class="blockquote">
-                            <img width="65%" src="assets/images/BannerDesktop.png" alt="The Weavers">
-                        </blockquote>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <blockquote class="blockquote">
-                            <p>If you would like to receive a no obligation quote, please click below.</p>
-                            <button type="button" class="btn btn-default" onclick="location.href='/booking.html'">Get a free quote</button>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </section>
-</body>
+    <div align="center">
+        <a href="#" class="returnBtn">Return To The Top of the Page</a>
+    </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap" async defer></script>
-
-// David's button
-
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-
-// Bingham's button
-
-<script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn1");
-    var span = document.getElementsByClassName("close")[0];
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap" async defer></script>
 
 </html>
