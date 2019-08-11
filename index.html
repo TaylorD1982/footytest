@@ -20,6 +20,84 @@
     <title>Football Group</title>
     <link rel="icon" type="image/ico" href="assets/images/w.png" />
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        google.charts.setOnLoadCallback(drawChartOne);
+        google.charts.setOnLoadCallback(drawChartTwo);
+        google.charts.setOnLoadCallback(drawChartThree);
+
+        function drawChartOne() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Al', 'David', 'Bingham', 'Duffy', 'Struan', 'William'],
+                ['2017', 89.71, 116.79, 90.76, 40.65, 0, 118.98],
+                ['2018', 41.87, 123.19, 18.49, 84.76, 57.26, 0],
+                ['2019', 107.96, 66.30, 34.14, 92.70, 74.26, 114.16],
+                ['2020', 0, 0, 0, 0, 0, 0],
+            ]);
+
+            var options = { title: 'All time winnings breakdown (gbp)', isStacked: true };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('First_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawChartTwo() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['David', 1],
+                ['Bingham', 1],
+                ['Duffy', 1],
+                ['Struan', 1],
+                ['Will', 1],
+                ['Al', 1]
+            ]);
+
+            var options = {
+                title: 'Breakdown of 2019 / 2020 winnings',
+                pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('Second_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawChartThree() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Game Day');
+            data.addColumn('number', 'Al');
+            data.addColumn('number', 'David');
+            data.addColumn('number', 'Craig');
+            data.addColumn('number', 'Duffy');
+            data.addColumn('number', 'William');
+            data.addColumn('number', 'Struan');
+
+            data.addRows([
+                [0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 0, 0, 0, 0, 0],
+                [2, 0, 6.58, 0, 0, 0, 0],
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Total winnings (GBP)',
+                    subtitle: '2019 / 2020 Season'
+                },
+                width: 900,
+                height: 500
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('Third_chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
+
+
 </head>
 
 <body>
@@ -100,8 +178,6 @@
         </tbody>
     </table>
 
-    <div id="map"></div>
-
     <div class="mobileHide">
         <img width="100%" src="assets/images/player.png" alt="Player Information" id="C4">
     </div>
@@ -109,7 +185,9 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-outline-warning"><a href="#openModalwill">William</a></button>
+                <a href="#openModalwill" class="item">
+                    <img src="assets/images/glass.png" width="100%">
+                </a>
 
                 <div id="openModalwill" class="modalDialog">
                     <div>
@@ -120,24 +198,25 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1>2018 / 2019 Statistics</h1>
-                                            <h2>Average odds</h2>
-                                            <p id="willStats1"></p>
-                                            <h2>Highest position</h2>
-                                            <p id="willStats2"></p>
-                                            <h2>Total Profit</h2>
-                                            <p id="willStats3"></p>
+                                            <h1 class="modalHeading">2019 / 2020 Season</h1>
+                                            <h2 class="modalSubHeading">Average odds</h2>
+                                            <p id="willStats1" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest position</h2>
+                                            <p id="willStats2" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Total Profit</h2>
+                                            <p id="willStats3" class="modalSubText"></p>
+                                            <h1 class="modalHeading">All Time Statistics</h1>
+                                            <h2 class="modalSubHeading">Total Winnings</h2>
+                                            <p id="willStats4" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest Finish</h2>
+                                            <p id="willStats5" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Trophies Won</h2>
+                                            <p id="willStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1>All Time Statistics</h1>
-                                            <h2>Total Winnings</h2>
-                                            <p id="willStats4"></p>
-                                            <h2>Highest Finish</h2>
-                                            <p id="willStats5"></p>
-                                            <h2>Trophies Won</h2>
-                                            <p id="willStats6"></p>
+                                            <div id="map"></div>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -145,7 +224,7 @@
                         </section>
 
                         <script>
-                            var will = ["9.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "-£34.75 (5th overall)", "-£34.75 (5th overall)", "-£34.75 (5th overall)"];
+                            var will = ["9.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
                             document.getElementById("willStats1").innerHTML = will[0];
                             document.getElementById("willStats2").innerHTML = will[1];
                             document.getElementById("willStats3").innerHTML = will[2];
@@ -161,7 +240,9 @@
             </div>
 
             <div class="col">
-                <button type="button" class="btn btn-outline-warning"><a href="#openModalAlastair">Alastair</a></button>
+                <a href="#openModalAlastair" class="item">
+                    <img src="assets/images/glass2.jpg" width="100%">
+                </a>
 
                 <div id="openModalAlastair" class="modalDialog">
                     <div>
@@ -187,7 +268,9 @@
 
 
             <div class="col">
-                <button type="button" class="btn btn-outline-warning"><a href="#openModalDavid">David</a></button>
+                <a href="#openModalDavid" class="item">
+                    <img src="assets/images/glass3.jpg" width="100%">
+                </a>
 
                 <div id="openModalDavid" class="modalDialog">
                     <div>
@@ -212,7 +295,9 @@
         </div>
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-outline-warning"><a href="#openModalStruan">Struan</a></button>
+                <a href="#openModalStruan" class="item">
+                    <img src="assets/images/glass6.jpg" width="100%">
+                </a>
 
                 <div id="openModalStruan" class="modalDialog">
                     <div>
@@ -235,7 +320,9 @@
                 </div>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-outline-warning"><a href="#openModalBingham">Bingham</a></button>
+                <a href="#openModalBingham" class="item">
+                    <img src="assets/images/glass4.jpg" width="100%">
+                </a>
 
                 <div id="openModalBingham" class="modalDialog">
                     <div>
@@ -258,7 +345,9 @@
                 </div>
             </div>
             <div class="col">
-                <button type="button" class="btn btn-outline-warning"><a href="#openModalDuffy">Duffy</a></button>
+                <a href="#openModalDuffy" class="item">
+                    <img src="assets/images/glass5.jpeg" width="100%">
+                </a>
 
                 <div id="openModalDuffy" class="modalDialog">
                     <div>
@@ -287,6 +376,25 @@
         <img width="100%" src="assets/images/group1.png" alt="Group Statistics" id="C5">
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="First_chart_div" style="border: 1px solid #ccc"></div>
+            </div>
+            <div class="col">
+                <div id="Second_chart_div" style="border: 1px solid #ccc"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="Third_chart_div" style="width: 100%; height: 500px"></div>
+            </div>
+            <div class="col">
+                <div id="Second_chart_div" style="border: 1px solid #ccc"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="mobileHide">
         <img width="100%" src="assets/images/contact.png" alt="Player Information" id="C6">
     </div>
@@ -305,7 +413,7 @@
             <textarea class="form-control" id="Textarea" rows="10" placeholder="Please write your message in here" name="Textarea" required></textarea>
         </div>
         <button type="submit" class="btn btn-default">
-            <img width="30%" src="assets/images/Banner.png" alt="Send Message">
+            <p>Send Message</p>
         </button>
     </form>
 
