@@ -179,13 +179,20 @@
  }
 
  .modalDialog>div {
-  width: 80%;
-  height: 500px;
+  width: 60%;
+  height: 510px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: white;
+ }
+ 
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .modalDialog>div {
+  width: 80%;
+  height: 650px;
+  }
  }
 
  .close {
@@ -218,7 +225,7 @@
   color: #de540f;
   margin-bottom: 20px;
   margin-top: 20px;
-  text-decoration: underline;
+  font-weight: bold;
 
  }
 
@@ -232,6 +239,12 @@
   font-size: 1em;
   margin-bottom: 10px;
  }
+ 
+ .trophy-heading {
+ margin-top: 20px;
+ color: #de540f;
+ font-weight: 1500;
+}
 
  /*-------------------------player information hover effects--------*/
 
@@ -284,7 +297,7 @@
 }
 
 #parent {
-    line-height: 500px;
+    line-height: 50px;
 }
 #parent img {
     vertical-align: middle;
@@ -295,3 +308,28 @@
  color: #de540f;
  text-decoration: underline;
 }
+
+.trophy-image {
+ padding-top: 100px;
+}
+
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .trophy-image {
+  padding-top: 0px;
+  }
+ }
+ 
+  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  h3.trophy-heading {
+  margin-top: 0px;
+  }
+ }
+ 
+ 
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  h1.modalHeading {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+ }
+ 
