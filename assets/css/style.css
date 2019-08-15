@@ -243,7 +243,7 @@
  .trophy-heading {
  margin-top: 20px;
  color: #de540f;
- font-weight: 1500;
+ font-weight: bold;
 }
 
  /*-------------------------player information hover effects--------*/
@@ -303,12 +303,6 @@
     vertical-align: middle;
 }
 
-.trophy-heading {
- margin-top: 20px;
- color: #de540f;
- text-decoration: underline;
-}
-
 .trophy-image {
  padding-top: 100px;
 }
@@ -332,4 +326,19 @@
   margin-bottom: 5px;
   }
  }
+ 
+ .messi {
+  width: 20%;
+ }
+ 
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .messi {
+  width: 50%;
+  }
+ }
+ 
+.chart {
+  width: 100%; 
+  min-height: 300px;
+}
  

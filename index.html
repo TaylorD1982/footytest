@@ -39,7 +39,7 @@
                 ['2019 / 2020', 0, 0, 0, 0, 0, 0],
             ]);
 
-            var options = { title: 'All time winnings breakdown (GBP)', height: 300, isStacked: true };
+            var options = { title: 'All time winnings breakdown (GBP)', height: 300, width: '100%', isStacked: true };
 
             var chart = new google.visualization.ColumnChart(document.getElementById('First_chart_div'));
             chart.draw(data, options);
@@ -61,6 +61,7 @@
                 title: 'Breakdown of 2019 / 2020 winnings',
                 pieHole: 0.4,
                 height: 300,
+                width: '100%',
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('Second_chart_div'));
@@ -85,6 +86,7 @@
                 title: 'Breakdown of selections by league',
                 pieHole: 0.4,
                 height: 300,
+                width: '100%',
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('fourth_chart_div'));
@@ -113,11 +115,19 @@
             var options = {
                 title: 'Total winnings (GBP)',
                 height: 300,
+                width: '100%',
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('Third_chart_div'));
             chart.draw(data, options);
         }
+
+        $(window).resize(function() {
+            drawChartOne();
+            drawChartTwo();
+            drawChartThree();
+            drawChartFour();
+        });
     </script>
 
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
@@ -532,19 +542,22 @@
 
     <div class="container">
         <div class="row" width="100%">
-            <div class="col-sm-12 col-lg-6">
-                <div id="First_chart_div" style="border: 1px solid #ccc" width="100%"></div>
+            <div class="col-lg-6">
+                <div id="First_chart_div" class="chart"></div>
             </div>
-            <div class="col-sm-12 col-lg-6">
-                <div id="Second_chart_div" style="border: 1px solid #ccc" width="100%"></div>
+            <div class="col-lg-6">
+                <div id="Second_chart_div" class="chart"></div>
             </div>
         </div>
+    </div>
+    
+    <div class="container">
         <div class="row" width="100%">
-            <div class="col-sm-12 col-lg-6">
-                <div id="Third_chart_div" style="border: 1px solid #ccc" width="100%"></div>
+            <div class="col-lg-6">
+                <div id="Third_chart_div" class="chart"></div>
             </div>
-            <div class="col-sm-12 col-lg-6">
-                <div id="fourth_chart_div" style="border: 1px solid #ccc" width="100%"></div>
+            <div class="col-lg-6">
+                <div id="fourth_chart_div" class="chart"></div>
             </div>
         </div>
     </div>
@@ -581,7 +594,7 @@
 
     <div align="center" class="footer">
         <a href="#" class="item">
-            <img src="assets/images/top.png" width="20%">
+            <img src="assets/images/top.png" class="messi">
         </a>
     </div>
 
