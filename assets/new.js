@@ -1,82 +1,35 @@
-<h2>1st Modal</h2>
+function initialize() {
+    var latlng = new google.maps.LatLng(18.520266,73.856406);
+    var latlng2 = new google.maps.LatLng(28.579943,77.330006);
+    var myOptions = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
 
-<!-- Trigger/Open The Modal -->
-<button class="myBtn">Open Modal</button>
+    var myOptions2 =  {
+        zoom: 15,
+        center: latlng2,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    
+    var map2 = new google.maps.Map(document.getElementById("map_canvas_2"), myOptions2);
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">×</span>
-      <h2>Modal Header</h2>
-    </div>
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-    </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
-  </div>
+    var myMarker = new google.maps.Marker(
+    {
+        position: latlng,
+        map: map,
+        title:"Pune"
+   });
 
-</div>
-
-<h2>2nd Modal</h2>
-
-<!-- Trigger/Open The Modal -->
-<button class="myBtn">Open Modal</button>
-
-<!-- The Modal -->
-<div id="myModal2" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal2-content">
-    <div class="modal-header">
-      <span class="close">×</span>
-      <h2>Modal Header</h2>
-    </div>
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-    </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
-  </div>
-
-</div>
-
-// Get the modal
-var modal = document.getElementsByClassName('modal');
-
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("myBtn");
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close");
-
-// When the user clicks the button, open the modal 
-btn[0].onclick = function() {
-    modal[0].style.display = "block";
+    var myMarker2 = new google.maps.Marker(
+    {
+        position: latlng2,
+        map: map2,
+        title:"Noida"
+    });
 }
 
-btn[1].onclick = function() {
-    modal[1].style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span[0].onclick = function() {
-    modal[0].style.display = "none";
-}
-
-span[1].onclick = function() {
-    modal[1].style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+google.maps.event.addDomListener(window, 'load', initialize);

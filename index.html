@@ -27,18 +27,19 @@
         google.charts.setOnLoadCallback(drawChartOne);
         google.charts.setOnLoadCallback(drawChartTwo);
         google.charts.setOnLoadCallback(drawChartThree);
+        google.charts.setOnLoadCallback(drawChartFour);
 
         function drawChartOne() {
 
             var data = google.visualization.arrayToDataTable([
                 ['Year', 'Al', 'David', 'Bingham', 'Duffy', 'Struan', 'William'],
-                ['2017', 89.71, 116.79, 90.76, 40.65, 0, 118.98],
-                ['2018', 41.87, 123.19, 18.49, 84.76, 57.26, 0],
-                ['2019', 107.96, 66.30, 34.14, 92.70, 74.26, 114.16],
-                ['2020', 0, 0, 0, 0, 0, 0],
+                ['2016 / 2017', 89.71, 116.79, 90.76, 40.65, 0, 118.98],
+                ['2017 / 2018', 41.87, 123.19, 18.49, 84.76, 57.26, 0],
+                ['2018/ 2019', 107.96, 66.30, 34.14, 92.70, 74.26, 114.16],
+                ['2019 / 2020', 0, 0, 0, 0, 0, 0],
             ]);
 
-            var options = { title: 'All time winnings breakdown (gbp)', isStacked: true };
+            var options = { title: 'All time winnings breakdown (GBP)', height: 300, isStacked: true };
 
             var chart = new google.visualization.ColumnChart(document.getElementById('First_chart_div'));
             chart.draw(data, options);
@@ -59,9 +60,34 @@
             var options = {
                 title: 'Breakdown of 2019 / 2020 winnings',
                 pieHole: 0.4,
+                height: 300,
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('Second_chart_div'));
+            chart.draw(data, options);
+        }
+
+        function drawChartFour() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['English Premier League', 8],
+                ['English Championship', 26],
+                ['English League 1', 6],
+                ['English League 2', 0],
+                ['scottish Premiership', 12],
+                ['Scottish Championship', 4],
+                ['Scottish League 1', 2],
+                ['Scottish League 2', 6]
+            ]);
+
+            var options = {
+                title: 'Breakdown of selections by league',
+                pieHole: 0.4,
+                height: 300,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('fourth_chart_div'));
             chart.draw(data, options);
         }
 
@@ -80,15 +106,13 @@
                 [0, 0, 0, 0, 0, 0, 0],
                 [1, 0, 0, 0, 0, 0, 0],
                 [2, 0, 6.58, 0, 0, 0, 0],
+                [3, 10, 6.58, 0, 0, 12, 0],
+                [4, 13, 6.58, 0, 15, 12, 0],
             ]);
 
             var options = {
-                chart: {
-                    title: 'Total winnings (GBP)',
-                    subtitle: '2019 / 2020 Season'
-                },
-                width: 900,
-                height: 500
+                title: 'Total winnings (GBP)',
+                height: 300,
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('Third_chart_div'));
@@ -96,8 +120,21 @@
         }
     </script>
 
-
-
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_UbfQMZPiQGURDwMtv5SCI");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_template', this);
+            });
+        };
+    </script>
 </head>
 
 <body>
@@ -105,11 +142,11 @@
     <!–– Header ––>
 
     <div class="mobileShow">
-        <img width="100%" src="assets/images/Banner.png" alt="The Weavers">
+        <img width="100%" src="assets/images/Banner.png" alt="Football League">
     </div>
 
     <div class="mobileHide">
-        <img width="100%" src="assets/images/BannerDesktop.png" alt="The Weavers">
+        <img width="100%" src="assets/images/BannerDesktop.png" alt="Football League">
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -182,17 +219,19 @@
         <img width="100%" src="assets/images/player.png" alt="Player Information" id="C4">
     </div>
 
+    <div class="mobileShow">
+        <img width="100%" src="assets/images/playerMobile.png" alt="Football League">
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col">
                 <a href="#openModalwill" class="item">
                     <img src="assets/images/glass.png" width="100%">
                 </a>
-
                 <div id="openModalwill" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-
                         <section>
                             <div class="container-fluid">
                                 <div class="row">
@@ -214,15 +253,15 @@
                                             <p id="willStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
-                                    <div class="col-12 col-md-6">
+                                    <div id="parent" class="col-12 col-md-6">
                                         <blockquote>
-                                            <div id="map"></div>
+                                            <h3 class="trophy-heading">Trophy Cabinet</h3>
+                                            <div><img width="100%" src="assets/images/2trophies.png" alt="Player Information"></div>
                                         </blockquote>
                                     </div>
                                 </div>
                             </div>
                         </section>
-
                         <script>
                             var will = ["9.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
                             document.getElementById("willStats1").innerHTML = will[0];
@@ -234,60 +273,99 @@
                         </script>
                     </div>
                 </div>
-
-
-
             </div>
-
             <div class="col">
                 <a href="#openModalAlastair" class="item">
                     <img src="assets/images/glass2.jpg" width="100%">
                 </a>
-
                 <div id="openModalAlastair" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-                        <h1>2018 / 2019 Statistics</h1>
-                        <h2>Average odds</h2>
-                        <p id="alStats1"></p>
-                        <h2>Highest position</h2>
-                        <p id="alStats2"></p>
-                        <h2>Total Profit</h2>
-                        <p id="alStats3"></p>
-
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <blockquote>
+                                        <h1 class="modalHeading">2019 / 2020 Season</h1>
+                                        <h2 class="modalSubHeading">Average odds</h2>
+                                        <p id="alStats1" class="modalSubText"></p>
+                                        <h2 class="modalSubHeading">Highest position</h2>
+                                        <p id="alStats2" class="modalSubText"></p>
+                                        <h2 class="modalSubHeading">Total Profit</h2>
+                                        <p id="alStats3" class="modalSubText"></p>
+                                        <h1 class="modalHeading">All Time Statistics</h1>
+                                        <h2 class="modalSubHeading">Total Winnings</h2>
+                                        <p id="alStats4" class="modalSubText"></p>
+                                        <h2 class="modalSubHeading">Highest Finish</h2>
+                                        <p id="alStats5" class="modalSubText"></p>
+                                        <h2 class="modalSubHeading">Trophies Won</h2>
+                                        <p id="alStats6" class="modalSubText"></p>
+                                    </blockquote>
+                                </div>
+                                <div id="parent" class="col-12 col-md-6">
+                                    <blockquote>
+                                        <h3 class="trophy-heading">Trophy Cabinet</h3>
+                                        <div><img width="100%" src="assets/images/1trophies.png" alt="Player Information"></div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
                         <script>
-                            var al = ["8.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
-                            document.getElementById("alStats1").innerHTML = al[1];
-                            document.getElementById("alStats2").innerHTML = al[2];
-                            document.getElementById("alStats3").innerHTML = al[0];
+                            var al = ["9.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
+                            document.getElementById("alStats1").innerHTML = al[0];
+                            document.getElementById("alStats2").innerHTML = al[1];
+                            document.getElementById("alStats3").innerHTML = al[2];
+                            document.getElementById("alStats4").innerHTML = al[3];
+                            document.getElementById("alStats5").innerHTML = al[4];
+                            document.getElementById("alStats6").innerHTML = al[5];
                         </script>
                     </div>
                 </div>
             </div>
-
-
-
             <div class="col">
                 <a href="#openModalDavid" class="item">
                     <img src="assets/images/glass3.jpg" width="100%">
                 </a>
-
                 <div id="openModalDavid" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-                        <h1>2018 / 2019 Statistics</h1>
-                        <h2>Average odds</h2>
-                        <p id="davidStats1"></p>
-                        <h2>Highest position</h2>
-                        <p id="davidStats2"></p>
-                        <h2>Total Profit</h2>
-                        <p id="davidStats3"></p>
-
+                        <section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h1 class="modalHeading">2019 / 2020 Season</h1>
+                                            <h2 class="modalSubHeading">Average odds</h2>
+                                            <p id="davidStats1" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest position</h2>
+                                            <p id="davidStats2" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Total Profit</h2>
+                                            <p id="davidStats3" class="modalSubText"></p>
+                                            <h1 class="modalHeading">All Time Statistics</h1>
+                                            <h2 class="modalSubHeading">Total Winnings</h2>
+                                            <p id="davidStats4" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest Finish</h2>
+                                            <p id="davidStats5" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Trophies Won</h2>
+                                            <p id="davidStats6" class="modalSubText"></p>
+                                        </blockquote>
+                                    </div>
+                                    <div id="parent" class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h3 class="trophy-heading">Trophy Cabinet</h3>
+                                            <div><img width="100%" src="assets/images/2trophies.png" alt="Player Information"></div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <script>
-                            var david = ["3.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
+                            var david = ["3.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
                             document.getElementById("davidStats1").innerHTML = david[0];
                             document.getElementById("davidStats2").innerHTML = david[1];
                             document.getElementById("davidStats3").innerHTML = david[2];
+                            document.getElementById("davidStats4").innerHTML = david[3];
+                            document.getElementById("davidStats5").innerHTML = david[4];
+                            document.getElementById("davidStats6").innerHTML = david[5];
                         </script>
                     </div>
                 </div>
@@ -298,23 +376,47 @@
                 <a href="#openModalStruan" class="item">
                     <img src="assets/images/glass6.jpg" width="100%">
                 </a>
-
                 <div id="openModalStruan" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-                        <h1>2018 / 2019 Statistics</h1>
-                        <h2>Average odds</h2>
-                        <p id="struanStats1"></p>
-                        <h2>Highest position</h2>
-                        <p id="struanStats2"></p>
-                        <h2>Total Profit</h2>
-                        <p id="struanStats3"></p>
-
+                        <section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h1 class="modalHeading">2019 / 2020 Season</h1>
+                                            <h2 class="modalSubHeading">Average odds</h2>
+                                            <p id="struanStats1" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest position</h2>
+                                            <p id="struanStats2" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Total Profit</h2>
+                                            <p id="struanStats3" class="modalSubText"></p>
+                                            <h1 class="modalHeading">All Time Statistics</h1>
+                                            <h2 class="modalSubHeading">Total Winnings</h2>
+                                            <p id="struanStats4" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest Finish</h2>
+                                            <p id="struanStats5" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Trophies Won</h2>
+                                            <p id="struanStats6" class="modalSubText"></p>
+                                        </blockquote>
+                                    </div>
+                                    <div id="parent" class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h3 class="trophy-heading">Trophy Cabinet</h3>
+                                            <div><img width="100%" src="assets/images/notrophies.png" alt="Player Information"></div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <script>
-                            var struan = ["6.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
-                            document.getElementById("struanStats1").innerHTML = struan[1];
-                            document.getElementById("struanStats2").innerHTML = struan[2];
-                            document.getElementById("struanStats3").innerHTML = struan[0];
+                            var struan = ["6.45 / 1 (lowest overall)", "1st ", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
+                            document.getElementById("struanStats1").innerHTML = struan[0];
+                            document.getElementById("struanStats2").innerHTML = struan[1];
+                            document.getElementById("struanStats3").innerHTML = struan[2];
+                            document.getElementById("struanStats4").innerHTML = struan[3];
+                            document.getElementById("struanStats5").innerHTML = struan[4];
+                            document.getElementById("struanStats6").innerHTML = struan[5];
                         </script>
                     </div>
                 </div>
@@ -323,23 +425,47 @@
                 <a href="#openModalBingham" class="item">
                     <img src="assets/images/glass4.jpg" width="100%">
                 </a>
-
                 <div id="openModalBingham" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-                        <h1>2018 / 2019 Statistics</h1>
-                        <h2>Average odds</h2>
-                        <p id="binghamStats1"></p>
-                        <h2>Highest position</h2>
-                        <p id="binghamStats2"></p>
-                        <h2>Total Profit</h2>
-                        <p id="binghamStats3"></p>
-
+                        <section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h1 class="modalHeading">2019 / 2020 Season</h1>
+                                            <h2 class="modalSubHeading">Average odds</h2>
+                                            <p id="binghamStats1" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest position</h2>
+                                            <p id="binghamStats2" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Total Profit</h2>
+                                            <p id="binghamStats3" class="modalSubText"></p>
+                                            <h1 class="modalHeading">All Time Statistics</h1>
+                                            <h2 class="modalSubHeading">Total Winnings</h2>
+                                            <p id="binghamStats4" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest Finish</h2>
+                                            <p id="binghamStats5" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Trophies Won</h2>
+                                            <p id="binghamStats6" class="modalSubText"></p>
+                                        </blockquote>
+                                    </div>
+                                    <div id="parent" class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h3 class="trophy-heading">Trophy Cabinet</h3>
+                                            <div><img width="100%" src="assets/images/notrophies.png" alt="Player Information"></div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <script>
-                            var bingham = ["4.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
-                            document.getElementById("binghamStats1").innerHTML = bingham[1];
-                            document.getElementById("binghamStats2").innerHTML = bingham[2];
-                            document.getElementById("binghamStats3").innerHTML = bingham[0];
+                            var bingham = ["4.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
+                            document.getElementById("binghamStats1").innerHTML = bingham[0];
+                            document.getElementById("binghamStats2").innerHTML = bingham[1];
+                            document.getElementById("binghamStats3").innerHTML = bingham[2];
+                            document.getElementById("binghamStats4").innerHTML = bingham[3];
+                            document.getElementById("binghamStats5").innerHTML = bingham[4];
+                            document.getElementById("binghamStats6").innerHTML = bingham[5];
                         </script>
                     </div>
                 </div>
@@ -348,23 +474,47 @@
                 <a href="#openModalDuffy" class="item">
                     <img src="assets/images/glass5.jpeg" width="100%">
                 </a>
-
                 <div id="openModalDuffy" class="modalDialog">
                     <div>
                         <a href="#close" title="Close" class="close">X</a>
-                        <h1>2018 / 2019 Statistics</h1>
-                        <h2>Average odds</h2>
-                        <p id="duffyStats1"></p>
-                        <h2>Highest position</h2>
-                        <p id="duffyStats2"></p>
-                        <h2>Total Profit</h2>
-                        <p id="duffyStats3"></p>
-
+                        <section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h1 class="modalHeading">2019 / 2020 Season</h1>
+                                            <h2 class="modalSubHeading">Average odds</h2>
+                                            <p id="duffyStats1" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest position</h2>
+                                            <p id="duffyStats2" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Total Profit</h2>
+                                            <p id="duffyStats3" class="modalSubText"></p>
+                                            <h1 class="modalHeading">All Time Statistics</h1>
+                                            <h2 class="modalSubHeading">Total Winnings</h2>
+                                            <p id="duffyStats4" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Highest Finish</h2>
+                                            <p id="duffyStats5" class="modalSubText"></p>
+                                            <h2 class="modalSubHeading">Trophies Won</h2>
+                                            <p id="duffyStats6" class="modalSubText"></p>
+                                        </blockquote>
+                                    </div>
+                                    <div id="parent" class="col-12 col-md-6">
+                                        <blockquote>
+                                            <h3 class="trophy-heading">Trophy Cabinet</h3>
+                                            <div><img width="100%" src="assets/images/notrophies.png" alt="Player Information"></div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <script>
-                            var duffy = ["7.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)"];
-                            document.getElementById("duffyStats1").innerHTML = duffy[1];
-                            document.getElementById("duffyStats2").innerHTML = duffy[2];
-                            document.getElementById("duffyStats3").innerHTML = duffy[0];
+                            var duffy = ["7.45 / 1 (lowest overall)", "1st", "-£34.75 (5th overall)", "£245.99", "1st", "Two"];
+                            document.getElementById("duffyStats1").innerHTML = duffy[0];
+                            document.getElementById("duffyStats2").innerHTML = duffy[1];
+                            document.getElementById("duffyStats3").innerHTML = duffy[2];
+                            document.getElementById("duffyStats4").innerHTML = duffy[3];
+                            document.getElementById("duffyStats5").innerHTML = duffy[4];
+                            document.getElementById("duffyStats6").innerHTML = duffy[5];
                         </script>
                     </div>
                 </div>
@@ -376,21 +526,25 @@
         <img width="100%" src="assets/images/group1.png" alt="Group Statistics" id="C5">
     </div>
 
+    <div class="mobileShow">
+        <img width="100%" src="assets/images/groupMobile.png" alt="Football League">
+    </div>
+
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="First_chart_div" style="border: 1px solid #ccc"></div>
+        <div class="row" width="100%">
+            <div class="col-sm-12 col-lg-6">
+                <div id="First_chart_div" style="border: 1px solid #ccc" width="100%"></div>
             </div>
-            <div class="col">
-                <div id="Second_chart_div" style="border: 1px solid #ccc"></div>
+            <div class="col-sm-12 col-lg-6">
+                <div id="Second_chart_div" style="border: 1px solid #ccc" width="100%"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div id="Third_chart_div" style="width: 100%; height: 500px"></div>
+        <div class="row" width="100%">
+            <div class="col-sm-12 col-lg-6">
+                <div id="Third_chart_div" style="border: 1px solid #ccc" width="100%"></div>
             </div>
-            <div class="col">
-                <div id="Second_chart_div" style="border: 1px solid #ccc"></div>
+            <div class="col-sm-12 col-lg-6">
+                <div id="fourth_chart_div" style="border: 1px solid #ccc" width="100%"></div>
             </div>
         </div>
     </div>
@@ -399,7 +553,13 @@
         <img width="100%" src="assets/images/contact.png" alt="Player Information" id="C6">
     </div>
 
-    <form class="was-validated">
+    <div class="mobileShow">
+        <img width="100%" src="assets/images/contactMobile.png" alt="Football League">
+    </div>
+
+    <h1 class="form-intro">If you have an enquiry, please contact us using the form below and we will get back to you as soon as we can.</h1>
+
+    <form class="was-validated" id="contact-form">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
@@ -419,10 +579,17 @@
 
     <!–– Footer ––>
 
-    <div align="center">
-        <a href="#" class="returnBtn">Return To The Top of the Page</a>
+    <div align="center" class="footer">
+        <a href="#" class="item">
+            <img src="assets/images/top.png" width="20%">
+        </a>
     </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap" async defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxfXHGgV8V65RJ4LN1N8P8nG8YbXRhI5E&callback=initMap">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
