@@ -39,7 +39,7 @@
                 ['2019 / 2020', 0, 0, 0, 0, 0, 0],
             ]);
 
-            var options = { height: 300, width: '100%', legend : 'none', isStacked: true };
+            var options = { height: 300, width: '100%', legend: 'none', isStacked: true };
 
             var chart = new google.visualization.ColumnChart(document.getElementById('First_chart_div'));
             chart.draw(data, options);
@@ -49,19 +49,19 @@
 
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
+                ['Al', 1],
                 ['David', 1],
                 ['Bingham', 1],
                 ['Duffy', 1],
                 ['Struan', 1],
-                ['Will', 1],
-                ['Al', 1]
+                ['Will', 1]
             ]);
 
             var options = {
                 pieHole: 0.4,
                 height: 300,
                 width: '100%',
-                legend : 'none', 
+                legend: 'none',
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('Second_chart_div'));
@@ -86,7 +86,7 @@
                 pieHole: 0.4,
                 height: 300,
                 width: '100%',
-                legend : 'none',
+                legend: 'none',
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('fourth_chart_div'));
@@ -99,10 +99,10 @@
             data.addColumn('number', 'Game Day');
             data.addColumn('number', 'Al');
             data.addColumn('number', 'David');
-            data.addColumn('number', 'Craig');
+            data.addColumn('number', 'Bingham');
             data.addColumn('number', 'Duffy');
-            data.addColumn('number', 'William');
             data.addColumn('number', 'Struan');
+            data.addColumn('number', 'Will');
 
             data.addRows([
                 [0, 0, 0, 0, 0, 0, 0],
@@ -114,8 +114,19 @@
 
             var options = {
                 height: 300,
+                vAxis: {
+                    gridlines: {
+                        color: 'transparent'
+                    }
+                },
+                hAxis: {
+                    gridlines: {
+                        color: 'transparent'
+                    }
+                },
                 width: '100%',
-                legend : 'none',
+                legend: 'none',
+
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('Third_chart_div'));
@@ -186,47 +197,47 @@
 
     <!–– Body ––>
 
-        <table class="table table-bordered" align="center">
-            <thead>
-                <tr class="table-heading">
-                    <th scope="col">Position</th>
-                    <th scope="col">Player</th>
-                    <th scope="col">Winnings</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>David</td>
-                    <td>£39.23</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>William</td>
-                    <td>£29.23</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Al</td>
-                    <td>£19.23</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Craig</td>
-                    <td>£15.23</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Struan</td>
-                    <td>£8.23</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Duffy</td>
-                    <td>£2.23</td>
-                </tr>
-            </tbody>
-        </table>
+    <table class="table table-bordered" align="center">
+        <thead>
+            <tr class="table-heading">
+                <th scope="col">Position</th>
+                <th scope="col">Player</th>
+                <th scope="col">Winnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>David</td>
+                <td>£39.23</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>William</td>
+                <td>£29.23</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Al</td>
+                <td>£19.23</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Craig</td>
+                <td>£15.23</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Struan</td>
+                <td>£8.23</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Duffy</td>
+                <td>£2.23</td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="mobileHide">
         <img width="100%" src="assets/images/player.png" alt="Player Information" id="C4">
@@ -547,9 +558,11 @@
         <div class="row" width="100%">
             <div class="col-lg-6">
                 <div id="First_chart_div" class="chart"></div>
+                <div><img src="assets/images/legend1.png" alt="Group Statistics"></div>
             </div>
             <div class="col-lg-6">
                 <div id="Second_chart_div" class="chart"></div>
+                <div><img src="assets/images/legend1.png" alt="Group Statistics"></div>
             </div>
         </div>
     </div>
@@ -558,6 +571,7 @@
         <div class="row" width="100%">
             <div class="col-lg-6">
                 <div id="Third_chart_div" class="chart"></div>
+                <div><img src="assets/images/legend1.png" alt="Group Statistics"></div>
             </div>
             <div class="col-lg-6">
                 <div id="fourth_chart_div" class="chart"></div>
