@@ -47,24 +47,42 @@
 
         function drawChartTwo() {
 
-            var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Al', 1],
-                ['David', 1],
-                ['Bingham', 1],
-                ['Duffy', 1],
-                ['Struan', 1],
-                ['Will', 1]
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Game Day');
+            data.addColumn('number', 'Al');
+
+            data.addRows([
+                [0, 0],
+                [1, -10],
+                [2, -20],
+                [3, 10],
+                [4, 13],
+                [5, 13],
+                [6, 34],
+                [7, 34],
+                [8, 34],
+                [9, 34],
             ]);
 
             var options = {
-                pieHole: 0.4,
                 height: 300,
+                vAxis: {
+                    gridlines: {
+                        color: 'transparent'
+                    }
+                },
+                hAxis: {
+                    gridlines: {
+                        color: 'transparent'
+                    }
+                },
                 width: '100%',
                 legend: 'none',
+                lineWidth: 5,
+
             };
 
-            var chart = new google.visualization.PieChart(document.getElementById('Second_chart_div'));
+            var chart = new google.visualization.LineChart(document.getElementById('Second_chart_div'));
             chart.draw(data, options);
         }
 
@@ -105,11 +123,16 @@
             data.addColumn('number', 'Will');
 
             data.addRows([
-                [0, 0, 0, 0, 0, 0, 0],
-                [1, 0, 0, 0, 0, 0, 0],
-                [2, 0, 6.58, 0, 0, 0, 0],
-                [3, 10, 6.58, 0, 0, 12, 0],
-                [4, 13, 6.58, 0, 15, 12, 0],
+                [0, 0,  0,      0, 0,       0, 0],
+                [1, 0,  0,      0, 0,       0, 0],
+                [2, 0,  6.58,   0, 0,       0, 0],
+                [3, 10, 6.58,   0, 0,       12, 0],
+                [4, 13, 6.58,   0, 15,      12, 0],
+                [5, 13, 16,     0, 15,       12, 0],
+                [6, 34, 16,     0, 15,       12, 0],
+                [7, 34, 23,     0, 44,       12, 0],
+                [8, 34, 67,     0, 44,       12, 0],
+                [9, 34, 67,     0, 44,      12, 0],
             ]);
 
             var options = {
@@ -557,14 +580,17 @@
     <div class="container">
         <div class="row" width="100%">
             <div class="col-lg-6">
-                <div><h1 class="form-intro">All Time Winnings Breakdown (£)</h1></div>
+                <div>
+                    <h1 class="form-intro">All Time Winnings Breakdown (£)</h1>
+                </div>
                 <div id="First_chart_div" class="chart"></div>
                 <div><img src="assets/images/legend1.png" alt="Group Statistics"></div>
             </div>
             <div class="col-lg-6">
-                <div><h1 class="form-intro">2019/2020 Winnings Split</h1></div>
+                <div>
+                    <h1 class="form-intro">Betters Profit v Bookies (£)</h1>
+                </div>
                 <div id="Second_chart_div" class="chart"></div>
-                <div><img src="assets/images/legend1.png" alt="Group Statistics"></div>
             </div>
         </div>
     </div>
@@ -572,12 +598,16 @@
     <div class="container">
         <div class="row" width="100%">
             <div class="col-lg-6">
-                <div><h1 class="form-intro">2019/2020 Total Winnings (£) over time</h1></div>
+                <div>
+                    <h1 class="form-intro">2019/2020 Total Winnings (£) over time</h1>
+                </div>
                 <div id="Third_chart_div" class="chart"></div>
                 <div><img src="assets/images/legend1.png" alt="Group Statistics"></div>
             </div>
             <div class="col-lg-6">
-                <div><h1 class="form-intro">2019/2020 League Breakdown</h1></div>
+                <div>
+                    <h1 class="form-intro">2019/2020 League Breakdown</h1>
+                </div>
                 <div id="fourth_chart_div" class="chart"></div>
                 <div><img src="assets/images/legend2.png" alt="Group Statistics"></div>
             </div>
