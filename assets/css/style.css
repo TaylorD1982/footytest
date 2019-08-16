@@ -134,7 +134,7 @@
   font-family: 'Chewy', cursive;
   font-size: 1em;
  }
- 
+
  p {
   margin: 0;
  }
@@ -143,7 +143,7 @@
   opacity: 1;
   background-color: #ec4e0c;
  }
- 
+
  .form-intro {
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1.55em;
@@ -152,7 +152,7 @@
   margin-top: 50px;
   padding: 0;
   text-align: center;
- 
+
  }
 
  /*------------------------- modal buttons --------*/
@@ -187,11 +187,11 @@
   border-radius: 10px;
   background: white;
  }
- 
+
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .modalDialog>div {
-  width: 80%;
-  height: 650px;
+   width: 80%;
+   height: 650px;
   }
  }
 
@@ -239,12 +239,12 @@
   font-size: 1em;
   margin-bottom: 10px;
  }
- 
+
  .trophy-heading {
- margin-top: 20px;
- color: #de540f;
- font-weight: bold;
-}
+  margin-top: 20px;
+  color: #de540f;
+  font-weight: bold;
+ }
 
  /*-------------------------player information hover effects--------*/
 
@@ -260,91 +260,108 @@
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
  }
- 
- 
+
+
  .footer {
-     margin-bottom: 50px;
+  margin-bottom: 50px;
  }
- 
+
 
  /*-------------------------Chart margins--------*/
- 
- 
+
  div.col {
   margin-top: 40px;
  }
 
 
 
-#fourth_chart_div{
+ #fourth_chart_div {
   display: inline-block;
   margin: 0 auto;
-}
+ }
 
-#Third_chart_div{
+ #Third_chart_div {
   display: inline-block;
   margin: 0 auto;
-}
+ }
 
-#Second_chart_div{
+ #Second_chart_div {
   display: inline-block;
   margin: 0 auto;
-}
+ }
 
-#First_chart_div{
+ #First_chart_div {
   display: inline-block;
   margin: 0 auto;
-}
+ }
 
-#parent {
-    line-height: 50px;
-}
-#parent img {
-    vertical-align: middle;
-}
+ #parent {
+  line-height: 50px;
+ }
 
-.trophy-image {
- padding-top: 100px;
-}
+ #parent img {
+  vertical-align: middle;
+ }
+
+ .trophy-image {
+  padding-top: 100px;
+ }
 
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .trophy-image {
-  padding-top: 0px;
+   padding-top: 0px;
   }
  }
- 
-  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   h3.trophy-heading {
-  margin-top: 0px;
+   margin-top: 0px;
   }
  }
- 
- 
+
+
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   h1.modalHeading {
-  margin-top: 5px;
-  margin-bottom: 5px;
+   margin-top: 5px;
+   margin-bottom: 5px;
   }
  }
- 
+
  .messi {
   width: 20%;
  }
- 
+
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .messi {
-  width: 50%;
+   width: 50%;
   }
  }
- 
-.chart {
-  width: 100%; 
-  min-height: 300px;
-}
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+ .chart {
+  width: 100%;
+  min-height: 300px;
+ }
+
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .chart {
-  width: 90%; 
-}
+   width: 90%;
+  }
+ }
+
+
+ #map {
+  height: 500px;
+  width: 50%;
+ }
+
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  #map {
+   height: 500px;
+   width: 90%;
+  }
+ }
+
+ .map {
+  margin-top: 30px;
  }
  
