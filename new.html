@@ -1,82 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table {
+                border-collapse: collapse;
+                border: 2px black solid;
+                font: 12px sans-serif;
+            }
 
-<head>
-  <style>
-    #map {
-      height: 500px;
-      width: 400px;
-    }
-  </style>
-</head>
+            td {
+                border: 1px black solid;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+        <script src="d3.min.js?v=3.2.8"></script>
 
+        <script type="text/javascript"charset="utf-8">
+            d3.text("data.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
 
+                var container = d3.select("body")
+                    .append("table")
 
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
 
-<body>
-  <div id="map"></div>
-  <script>
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 5,
-        center: { lat: 54.9533, lng: -3.0 }
-      });
-
-      setMarkers(map);
-    }
-
-    // Data for the markers consisting of a name, a LatLng and a zIndex for the
-    // order in which these markers should display on top of each other.
-    var beaches = [
-      ['Bondi Beach', 54.9533, -2.888, 4],
-      ['Coogee Beach', 54.9533, -2.7, 5],
-      ['Cronulla Beach', 54.9533, -2.6, 3],
-      ['Manly Beach', 54.9533, -2.5, 2],
-      ['Maroubra Beach', 54.9533, -2.4, 1]
-    ];
-
-    function setMarkers(map) {
-
-      // Marker sizes are expressed as a Size of X,Y where the origin of the image
-      // (0,0) is located in the top left of the image.
-
-      // Origins, anchor positions and coordinates of the marker increase in the X
-      // direction to the right and in the Y direction down.
-      var image = {
-        url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-        // This marker is 20 pixels wide by 32 pixels high.
-        size: new google.maps.Size(20, 32),
-        // The origin for this image is (0, 0).
-        origin: new google.maps.Point(0, 0),
-        // The anchor for this image is the base of the flagpole at (0, 32).
-        anchor: new google.maps.Point(0, 32)
-      };
-      // Shapes define the clickable region of the icon. The type defines an HTML
-      // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-      // The final coordinate closes the poly by connecting to the first coordinate.
-      var shape = {
-        coords: [1, 1, 1, 20, 18, 20, 18, 1],
-        type: 'poly'
-      };
-      for (var i = 0; i < beaches.length; i++) {
-        var beach = beaches[i];
-        var marker = new google.maps.Marker({
-          position: { lat: beach[1], lng: beach[2] },
-          map: map,
-          icon: image,
-          animation: google.maps.Animation.DROP,
-          shape: shape,
-          title: beach[0],
-          zIndex: beach[3]
-        });
-      }
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxfXHGgV8V65RJ4LN1N8P8nG8YbXRhI5E&callback=initMap">
-  </script>
-
-
-
-</body>
-
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+        </script>
+    </body>
 </html>
