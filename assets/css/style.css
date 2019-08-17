@@ -83,6 +83,13 @@
   color: white;
   background-color: #de540f;
  }
+ 
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .table {
+   width: 80%;
+   font-size: 1.50em;
+  }
+ }
 
  /*-------------------------Player Information--------*/
 
@@ -322,7 +329,7 @@
 
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   h1.modalHeading {
-   margin-top: 5px;
+   margin-top: 15px;
    margin-bottom: 5px;
   }
  }
