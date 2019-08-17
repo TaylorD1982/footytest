@@ -187,7 +187,7 @@
 
  .modalDialog>div {
   width: 60%;
-  height: 510px;
+  height: 480px;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
@@ -198,7 +198,7 @@
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .modalDialog>div {
    width: 90%;
-   height: 650px;
+   height: 90%;
   }
  }
 
@@ -237,7 +237,7 @@
  }
 
  .modalSubHeading {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   margin-bottom: 1px;
  }
@@ -248,6 +248,7 @@
  }
 
  .trophy-heading {
+  font-size: 1.8em;
   margin-top: 20px;
   color: #de540f;
   font-weight: bold;
@@ -323,6 +324,7 @@
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   h3.trophy-heading {
    margin-top: 0px;
+   font-size: 1.2em;
   }
  }
 
@@ -331,6 +333,7 @@
   h1.modalHeading {
    margin-top: 15px;
    margin-bottom: 5px;
+   font-size: 1.2em;
   }
  }
 
