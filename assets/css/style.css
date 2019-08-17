@@ -190,7 +190,7 @@
 
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .modalDialog>div {
-   width: 80%;
+   width: 90%;
    height: 650px;
   }
  }
@@ -218,7 +218,7 @@
   background: #00d9ff;
  }
 
- /*-------------------------modal text styles--------*/
+ /*-------------------------modal--------*/
 
  .modalHeading {
   font-size: 1.8em;
