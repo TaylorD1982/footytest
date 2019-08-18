@@ -53,8 +53,9 @@
 
             data.addRows([
                 [0, 0],
-                [1, -10],
-                [2, -20],
+                [1, -8],
+                [2, -18],
+                [3, -28],
             ]);
 
             var options = {
@@ -116,9 +117,10 @@
             data.addColumn('number', 'Will');
 
             data.addRows([
-                [0,     0,      0,      0,      0,       0,     0],
-                [1,     0,      0,      0,      0,       0,     0],
-                [2,     0,      0,      0,      0,       0,     0],
+                [0, 0, 0, 0, 0, 0, 0],
+                [1, 0, 0, 0, 0, 0, 0],
+                [2, 0, 0, 0, 0, 0, 0],
+                [3, 0, 0, 0, 0, 0, 0],
             ]);
 
             var options = {
@@ -289,7 +291,9 @@
                                     <div id="parent" class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
-                                            <div><img class="trophy-image" width="100%" src="assets/images/willTrophies.png" alt="Player Information"></div>
+                                            <div class="container">
+                                                <img class="trophy-image" width="100%" src="assets/images/willTrophies.png" alt="Player Information">
+                                            </div>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -609,100 +613,103 @@
     </div>
 
 
-    <div align="center" class="map">
-        <div id="map" align="center"></div>
-    </div>
+    <center>
+        <br><br>
+        <input onclick="drop();" type=button value="Show location of backed clubs">
+        <br><br>
+        <div id="map"></div>
+    </center>
 
     <script>
         var map;
+        var all = [
+            { "name": '0', "lat": 51.4749, "lng": -0.221619, "status": 'David' }, 
+            { "name": '1', "lat": 53.7286, "lng": -2.48937, "status": 'David' },
+            { "name": '2', "lat": 51.6498, "lng": -0.401569, "status": 'David' },
+            { "name": '3', "lat": 50.8609, "lng": -0.08014, "status": 'David' },
+            { "name": '4', "lat": 55.604599, "lng": -4.50846, "status": 'David' },
+            { "name": '5', "lat": 55.7821, "lng": -4.058, "status": 'David' },
+            { "name": '6', "lat": 51.488201, "lng": -0.302621, "status": 'David' },
+            { "name": '7', "lat": 52.475601, "lng": -1.86824, "status": 'David' },
+            { "name": '8', "lat": 52.9884, "lng": -2.17542, "status": 'David' },
+            { "name": '9', "lat": 51.5093, "lng": -0.232204, "status": 'David' },
+            { "name": '10', "lat": 53.547699, "lng": -2.65415, "status": 'David' }, 
+            { "name": '11', "lat": 51.4729, "lng": -3.20413, "status": 'David' },
+            { "name": '12', "lat": 55.849701, "lng": -4.20561, "status": 'Al' },
+            { "name": '13', "lat": 56.409901, "lng": -3.47684, "status": 'Al' },
+            { "name": '14', "lat": 54.9146, "lng": -1.38837, "status": 'Al' },
+            { "name": '15', "lat": 51.7164, "lng": -1.20775, "status": 'Al' },
+            { "name": '16', "lat": 51.6306, "lng": -0.800299, "status": 'Al' },
+            { "name": '17', "lat": 53.580502, "lng": -2.53571, "status": 'Al' },
+            { "name": '18', "lat": 51.474899, "lng": -0.221619, "status": 'Al' },
+            { "name": '19', "lat": 55.860199, "lng": -4.01145, "status": 'Al' },
+            { "name": '20', "lat": 53.580502, "lng": -2.53571, "status": 'Al' },
+            { "name": '21', "lat": 52.448101, "lng": -1.49563, "status": 'Al' },
+            { "name": '22', "lat": 56.005299, "lng": -3.75262, "status": 'Al' },
+            { "name": '22', "lat": 51.300151, "lng": -0.766592, "status": 'Al' },
+            { "name": '23', "lat": 55.9384, "lng": -4.56162, "status": 'Al' }
+        ];
+        var markers = [];
 
         function initMap() {
-            map = new google.maps.Map(
-                document.getElementById('map'), { center: new google.maps.LatLng(54.5, -2.9), zoom: 5.5 });
-
-            var iconBase =
-                'assets/images/';
-
-            var icons = {
-                parking: {
-                    icon: iconBase + 'A.png'
-                },
-                library: {
-                    icon: iconBase + 'A.png'
-                },
-                info: {
-                    icon: iconBase + 'B.png'
-                }
-            };
-
-            var features = [{
-                position: new google.maps.LatLng(54.109864, -2.118092),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.50923, -2.218092),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.5094, -2.118092),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.207123, -2.118092),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.503469, -2.118092),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.506249, -2.72364),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.809865, -2.115428),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.12184),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.715443),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.11337),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.167),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.1225),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'parking'
-            }, {
-                position: new google.maps.LatLng(54.509865, -2.118092),
-                type: 'library'
-            }];
-
-            // Create markers.
-            for (var i = 0; i < features.length; i++) {
-                var marker = new google.maps.Marker({
-                    position: features[i].position,
-                    icon: icons[features[i].type].icon,
-                    map: map
-                });
-            };
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 54.5, lng: -2.9 },
+                zoom: 4.9
+            });
         }
+
+        function drop() {
+            map.setZoom(5.2);
+            clearMarkers();
+            for (var j = 0; j < all.length; j++) {
+                addMarker(all[j], j * 200);
+            }
+            //	stop();
+        }
+
+        function clearMarkers() {
+            for (var j = 0; j < markers.length; j++) {
+                markers[j].setMap(null);
+            }
+            markers = [];
+        }
+
+        function addMarker(position, timeout) {
+            var icon = "";
+            var data = position;
+            switch (data.status) {
+                case "Al":
+                    icon = "red";
+                    break;
+                case "David":
+                    icon = "green";
+                    break;
+                case "Will":
+                    icon = "blue";
+                    break;
+                case "Duffy":
+                    icon = "yellow";
+                    break;
+                case "Struan":
+                    icon = "purple";
+                    break;
+                case "Bingham":
+                    icon = "orange";
+                    break;
+            }
+            icon = "http://maps.google.com/mapfiles/ms/micons/" + icon + ".png";
+            window.setTimeout(function() {
+                markers.push(new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    title: data.name,
+                    animation: google.maps.Animation.DROP,
+                    icon: new google.maps.MarkerImage(icon)
+                }));
+            }, timeout);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
 
