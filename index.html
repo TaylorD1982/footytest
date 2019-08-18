@@ -612,18 +612,29 @@
         <img width="100%" src="assets/images/bettingMobile.png" alt="Betting">
     </div>
 
+    <h1 class="form-intro">Click below to see the location of teams featured in this season's bets.</h1>
 
     <center>
-        <br><br>
-        <input onclick="drop();" type=button value="Show location of backed clubs">
-        <br><br>
+        <br>
+        <button type="submit" class="btn btn-success" onclick="drop();" align="center">
+        <p>Click Here</p>
+    </button>
+    </center>
+
+    <center>
+        <br>
+        <img width="40%" src="assets/images/map-markers.png" alt="Betting">
+    </center>
+
+    <center>
+        <br>
         <div id="map"></div>
     </center>
 
     <script>
         var map;
         var all = [
-            { "name": '0', "lat": 51.4749, "lng": -0.221619, "status": 'David' }, 
+            { "name": '0', "lat": 51.4749, "lng": -0.221619, "status": 'David' },
             { "name": '1', "lat": 53.7286, "lng": -2.48937, "status": 'David' },
             { "name": '2', "lat": 51.6498, "lng": -0.401569, "status": 'David' },
             { "name": '3', "lat": 50.8609, "lng": -0.08014, "status": 'David' },
@@ -633,8 +644,9 @@
             { "name": '7', "lat": 52.475601, "lng": -1.86824, "status": 'David' },
             { "name": '8', "lat": 52.9884, "lng": -2.17542, "status": 'David' },
             { "name": '9', "lat": 51.5093, "lng": -0.232204, "status": 'David' },
-            { "name": '10', "lat": 53.547699, "lng": -2.65415, "status": 'David' }, 
+            { "name": '10', "lat": 53.547699, "lng": -2.65415, "status": 'David' },
             { "name": '11', "lat": 51.4729, "lng": -3.20413, "status": 'David' },
+
             { "name": '12', "lat": 55.849701, "lng": -4.20561, "status": 'Al' },
             { "name": '13', "lat": 56.409901, "lng": -3.47684, "status": 'Al' },
             { "name": '14', "lat": 54.9146, "lng": -1.38837, "status": 'Al' },
@@ -647,7 +659,23 @@
             { "name": '21', "lat": 52.448101, "lng": -1.49563, "status": 'Al' },
             { "name": '22', "lat": 56.005299, "lng": -3.75262, "status": 'Al' },
             { "name": '22', "lat": 51.300151, "lng": -0.766592, "status": 'Al' },
-            { "name": '23', "lat": 55.9384, "lng": -4.56162, "status": 'Al' }
+            { "name": '23', "lat": 55.9384, "lng": -4.56162, "status": 'Al' },
+
+            { "name": '24', "lat": 53.552399, "lng": -1.46756, "status": 'Bing' },
+            { "name": '25', "lat": 53.7286, "lng": -2.48937, "status": 'Bing' },
+            { "name": '26', "lat": 51.4865, "lng": 0.036757, "status": 'Bing' },
+            { "name": '27', "lat": 52.9884, "lng": -2.17542, "status": 'Bing' },
+            { "name": '28', "lat": 51.5093, "lng": -0.232204, "status": 'Bing' },
+            { "name": '29', "lat": 55.9384, "lng": -4.56162, "status": 'Bing' },
+            { "name": '30', "lat": 53.580502, "lng": -2.53571, "status": 'Bing' },
+            { "name": '31', "lat": 55.070301, "lng": -3.6246, "status": 'Bing' },
+            { "name": '32', "lat": 56.0756, "lng": -3.44196, "status": 'Bing' },
+            { "name": '32', "lat": 53.9165, "lng": -3.02484, "status": 'Bing' },
+            { "name": '33', "lat": 51.405102, "lng": -0.281984, "status": 'Bing' },
+
+            { "name": '32', "lat": 56.0756, "lng": 4.44196, "status": 'Struan' },
+            { "name": '32', "lat": 53.9165, "lng": 3.02484, "status": 'Will' },
+            { "name": '33', "lat": 51.405102, "lng": 2.281984, "status": 'Duffy' }
         ];
         var markers = [];
 
@@ -662,9 +690,8 @@
             map.setZoom(5.2);
             clearMarkers();
             for (var j = 0; j < all.length; j++) {
-                addMarker(all[j], j * 200);
+                addMarker(all[j], j * 100);
             }
-            //	stop();
         }
 
         function clearMarkers() {
@@ -693,7 +720,7 @@
                 case "Struan":
                     icon = "purple";
                     break;
-                case "Bingham":
+                case "Bing":
                     icon = "orange";
                     break;
             }
