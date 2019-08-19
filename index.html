@@ -152,21 +152,13 @@
         });
     </script>
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             emailjs.init("user_UbfQMZPiQGURDwMtv5SCI");
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_template', this);
-            });
-        };
-    </script>
+
 </head>
 
 <body>
@@ -251,14 +243,14 @@
     </table>
 
     <div class="mobileHide">
-        <img width="100%" src="assets/images/player.png" alt="Player Information" id="C4">
+        <img width="100%" src="assets/images/player.png" alt="Player Information">
     </div>
 
     <div class="mobileShow">
         <img width="100%" src="assets/images/playerMobile.png" alt="Football League">
     </div>
 
-    <div class="container">
+    <div class="container" id="C4">
         <div class="row">
             <div class="col">
                 <a href="#openModalwill" class="item">
@@ -300,7 +292,7 @@
                             </div>
                         </section>
                         <script>
-                            var will = ["11 / 1", "Fulham", "-£4", "£233", "Champion", "6th"];
+                            var will = ["30 / 1", "Barnsley", "-£6", "£233", "Champion", "6th"];
                             document.getElementById("willStats1").innerHTML = will[0];
                             document.getElementById("willStats2").innerHTML = will[1];
                             document.getElementById("willStats3").innerHTML = will[2];
@@ -347,7 +339,7 @@
                             </div>
                         </div>
                         <script>
-                            var al = ["2 / 1", "Bolton Wanderers", "-£4", "£239", "2nd", "4th"];
+                            var al = ["1.3 / 1", "Bolton Wanderers", "-£6", "£239", "2nd", "4th"];
                             document.getElementById("alStats1").innerHTML = al[0];
                             document.getElementById("alStats2").innerHTML = al[1];
                             document.getElementById("alStats3").innerHTML = al[2];
@@ -396,7 +388,7 @@
                             </div>
                         </section>
                         <script>
-                            var david = ["4 / 1", "Blackburn Rovers", "-£4", "£246", "1st", "Fifth"];
+                            var david = ["3.4 / 1", "Blackburn Rovers", "-£6", "£246", "1st", "Fifth"];
                             document.getElementById("davidStats1").innerHTML = david[0];
                             document.getElementById("davidStats2").innerHTML = david[1];
                             document.getElementById("davidStats3").innerHTML = david[2];
@@ -447,7 +439,7 @@
                             </div>
                         </section>
                         <script>
-                            var struan = ["13 / 1", "Hearts", "-£4", "£132", "3rd", "4th"];
+                            var struan = ["11 / 1", "Ross County", "-£6", "£132", "3rd", "4th"];
                             document.getElementById("struanStats1").innerHTML = struan[0];
                             document.getElementById("struanStats2").innerHTML = struan[1];
                             document.getElementById("struanStats3").innerHTML = struan[2];
@@ -496,7 +488,7 @@
                             </div>
                         </section>
                         <script>
-                            var bingham = ["123 / 1", "Charlton Athletic", "-£4", "£142", "3rd", "6th"];
+                            var bingham = ["35 / 1", "Charlton Athletic", "-£6", "£142", "3rd", "6th"];
                             document.getElementById("binghamStats1").innerHTML = bingham[0];
                             document.getElementById("binghamStats2").innerHTML = bingham[1];
                             document.getElementById("binghamStats3").innerHTML = bingham[2];
@@ -545,7 +537,7 @@
                             </div>
                         </section>
                         <script>
-                            var duffy = ["230 / 1", "Queen of the South", "-£4", "£217", "2nd", "5th"];
+                            var duffy = ["107 / 1", "Queen of the South", "-£6", "£217", "2nd", "5th"];
                             document.getElementById("duffyStats1").innerHTML = duffy[0];
                             document.getElementById("duffyStats2").innerHTML = duffy[1];
                             document.getElementById("duffyStats3").innerHTML = duffy[2];
@@ -560,14 +552,14 @@
     </div>
 
     <div class="mobileHide">
-        <img width="100%" src="assets/images/group1.png" alt="Group Statistics" id="C5">
+        <img width="100%" src="assets/images/group1.png" alt="Group Statistics">
     </div>
 
     <div class="mobileShow">
         <img width="100%" src="assets/images/groupMobile.png" alt="Football League">
     </div>
 
-    <div class="container">
+    <div class="container" id="C5">
         <div class="row" width="100%">
             <div class="col-lg-6">
                 <div>
@@ -605,14 +597,14 @@
     </div>
 
     <div class="mobileHide">
-        <img width="100%" src="assets/images/bettingdesk.png" alt="Betting" id="C7">
+        <img width="100%" src="assets/images/bettingdesk.png" alt="Betting">
     </div>
 
     <div class="mobileShow">
         <img width="100%" src="assets/images/bettingMobile.png" alt="Betting">
     </div>
 
-    <h1 class="form-intro">Click below to see the location of teams featured in this season's bets.</h1>
+    <h1 class="form-intro" id="C7">Click below to see the location of teams featured in this season's bets.</h1>
 
     <center>
         <br>
@@ -623,7 +615,7 @@
 
     <center>
         <br>
-        <img width="40%" src="assets/images/map-markers.png" alt="Betting">
+        <img class="map-legends" width="40%" src="assets/images/map-markers.png" alt="Betting">
     </center>
 
     <center>
@@ -635,7 +627,7 @@
         var map;
         var all = [
             { "name": '0', "lat": 51.4749, "lng": -0.221619, "status": 'David' },
-            { "name": '1', "lat": 53.7286, "lng": -2.48937, "status": 'David' },
+            { "name": '1', "lat": 53.7286, "lng": -2.48937, "status": 'David' }, //Blackburn
             { "name": '2', "lat": 51.6498, "lng": -0.401569, "status": 'David' },
             { "name": '3', "lat": 50.8609, "lng": -0.08014, "status": 'David' },
             { "name": '4', "lat": 55.604599, "lng": -4.50846, "status": 'David' },
@@ -653,7 +645,7 @@
             { "name": '15', "lat": 51.7164, "lng": -1.20775, "status": 'Al' },
             { "name": '16', "lat": 51.6306, "lng": -0.800299, "status": 'Al' },
             { "name": '17', "lat": 53.580502, "lng": -2.53571, "status": 'Al' },
-            { "name": '18', "lat": 51.474899, "lng": -0.221619, "status": 'Al' },
+            { "name": '18', "lat": 51.474899, "lng": -0.221619, "status": 'Al' }, //Fulham
             { "name": '19', "lat": 55.860199, "lng": -4.01145, "status": 'Al' },
             { "name": '20', "lat": 53.580502, "lng": -2.53571, "status": 'Al' },
             { "name": '21', "lat": 52.448101, "lng": -1.49563, "status": 'Al' },
@@ -673,9 +665,63 @@
             { "name": '32', "lat": 53.9165, "lng": -3.02484, "status": 'Bing' },
             { "name": '33', "lat": 51.405102, "lng": -0.281984, "status": 'Bing' },
 
-            { "name": '32', "lat": 56.0756, "lng": 4.44196, "status": 'Struan' },
-            { "name": '32', "lat": 53.9165, "lng": 3.02484, "status": 'Will' },
-            { "name": '33', "lat": 51.405102, "lng": 2.281984, "status": 'Duffy' }
+            { "name": '34', "lat": 55.938801, "lng": -3.2325, "status": 'Struan' }, //Hearts
+            { "name": '35', "lat": 57.595901, "lng": -4.41898, "status": 'Struan' }, //Ross County
+            { "name": '36', "lat": 51.649799, "lng": -0.401569, "status": 'Struan' }, //Watford
+            { "name": '37', "lat": 50.860901, "lng": -0.08014, "status": 'Struan' }, //Brighton
+            { "name": '38', "lat": 53.654301, "lng": -1.76837, "status": 'Struan' }, //Huddersfield
+            { "name": '39', "lat": 51.5093, "lng": -0.232204, "status": 'Struan' }, //QPR
+            { "name": '40', "lat": 52.508999, "lng": -1.96418, "status": 'Struan' }, //WBA
+            { "name": '41', "lat": 51.884201, "lng": -0.43155, "status": 'Struan' }, //Luton
+            { "name": '42', "lat": 57.595901, "lng": -4.41898, "status": 'Struan' }, //Ross County
+            { "name": '43', "lat": 55.8815, "lng": -4.26938, "status": 'Struan' }, //partick
+            { "name": '44', "lat": 50.860901, "lng": -0.08014, "status": 'Struan' }, //Brighton
+            { "name": '45', "lat": 51.5383, "lng": -0.016587, "status": 'Struan' }, //West Ham
+
+            { "name": '46', "lat": 53.552399, "lng": -1.46756, "status": 'Will' }, //Barnsley
+            { "name": '47', "lat": 53.7286, "lng": -2.48937, "status": 'Will' }, //Blackburn
+            { "name": '48', "lat": 51.474899, "lng": -0.221619, "status": 'Will' }, //Fulham
+            { "name": '49', "lat": 53.552399, "lng": -1.46756, "status": 'Will' }, //Barnsley
+            { "name": '50', "lat": 53.7286, "lng": -2.48937, "status": 'Will' }, //Blackburn
+            { "name": '51', "lat": 51.474899, "lng": -0.221619, "status": 'Will' }, //Fulham
+            { "name": '32', "lat": 53.438702, "lng": -2.96619, "status": 'Will' }, //Everton
+            { "name": '32', "lat": 52.054401, "lng": 1.14554, "status": 'Will' }, //Ipswich
+            { "name": '32', "lat": 51.3983, "lng": -0.085455, "status": 'Will' }, // C Palace
+            { "name": '32', "lat": 54.9146, "lng": -1.38837, "status": 'Will' }, // Sunderland
+            { "name": '32', "lat": 51.4865, "lng": 0.036757, "status": 'Will' }, //Charlton
+            { "name": '32', "lat": 52.509201, "lng": -1.88508, "status": 'Will' }, //Villa
+            { "name": '32', "lat": 50.735199, "lng": -1.83839, "status": 'Will' }, //Bournemouth
+            { "name": '32', "lat": 53.547699, "lng": -2.65415, "status": 'Will' }, //wigan
+            { "name": '32', "lat": 53.7775, "lng": -1.57212, "status": 'Will' }, //Leeds
+            { "name": '32', "lat": 50.9058, "lng": -1.39114, "status": 'Will' }, //Southampton
+            { "name": '32', "lat": 53.430801, "lng": -2.96096, "status": 'Will' }, //Liverpool
+            { "name": '32', "lat": 51.649799, "lng": -0.401569, "status": 'Will' }, //Watford
+            { "name": '32', "lat": 53.438702, "lng": -2.96619, "status": 'Will' }, //Everton
+
+            { "name": '33', "lat": 53.438702, "lng": -2.96619, "status": 'Duffy' }, //Everton
+            { "name": '33', "lat": 51.649799, "lng": -0.401569, "status": 'Duffy' }, //Watford
+            { "name": '33', "lat": 56.735298, "lng": -2.6565, "status": 'Duffy' }, //Brechin
+            { "name": '33', "lat": 55.938801, "lng": -3.2325, "status": 'Duffy' }, //Hearts
+            { "name": '33', "lat": 57.595901, "lng": -4.41898, "status": 'Duffy' }, //Ross County
+            { "name": '33', "lat": 52.475601, "lng": -1.86824, "status": 'Duffy' }, //Birmingham
+            { "name": '33', "lat": 53.3703, "lng": -1.47083, "status": 'Duffy' }, //Shefield Utd
+            { "name": '33', "lat": 53.771999, "lng": -2.68832, "status": 'Duffy' }, //Preston
+            { "name": '33', "lat": 51.485901, "lng": -0.050743, "status": 'Duffy' }, //Millwall
+            { "name": '33', "lat": 55.886398, "lng": -3.52207, "status": 'Duffy' }, //Livingston
+            { "name": '33', "lat": 55.780399, "lng": -3.9803, "status": 'Duffy' }, //Motherwell
+            { "name": '33', "lat": 55.961601, "lng": -3.16521, "status": 'Duffy' }, //Hibs
+            { "name": '33', "lat": 55.852901, "lng": -4.42879, "status": 'Duffy' }, //St Mirren
+            { "name": '33', "lat": 56.552299, "lng": -2.5914, "status": 'Duffy' }, //Arbroath
+            { "name": '33', "lat": 55.070301, "lng": -3.6246, "status": 'Duffy' }, //QOTS
+            { "name": '33', "lat": 54.8955, "lng": -2.91365, "status": 'Duffy' }, //Carlisle
+            { "name": '33', "lat": 53.137798, "lng": -1.2013, "status": 'Duffy' }, //Mansfield
+            { "name": '33', "lat": 53.509899, "lng": -1.11382, "status": 'Duffy' }, //Doncaster
+            { "name": '33', "lat": 53.9165, "lng": -3.02484, "status": 'Duffy' }, //Fleetwood
+            { "name": '33', "lat": 56.099899, "lng": -3.16851, "status": 'Duffy' }, //Raith
+            { "name": '33', "lat": 54.902199, "lng": -5.01249, "status": 'Duffy' }, //Stramraer
+
+
+
         ];
         var markers = [];
 
@@ -690,7 +736,7 @@
             map.setZoom(5.2);
             clearMarkers();
             for (var j = 0; j < all.length; j++) {
-                addMarker(all[j], j * 100);
+                addMarker(all[j], j * 350);
             }
         }
 
@@ -741,14 +787,14 @@
 
 
     <div class="mobileHide">
-        <img width="100%" src="assets/images/contact.png" alt="Player Information" id="C6">
+        <img width="100%" src="assets/images/contact.png" alt="Player Information">
     </div>
 
     <div class="mobileShow">
         <img width="100%" src="assets/images/contactMobile.png" alt="Football League">
     </div>
 
-    <h1 class="form-intro">If you have an enquiry, please contact us using the form below and we will get back to you as soon as we can.</h1>
+    <h1 class="form-intro" id="C6">If you have an enquiry, please contact us using the form below and we will get back to you as soon as we can.</h1>
 
     <form class="was-validated" id="contact-form">
         <div class="form-group">
