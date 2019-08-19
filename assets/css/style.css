@@ -309,6 +309,7 @@
 
  #parent img {
   vertical-align: middle;
+    bottom: 0;
  }
 
  .trophy-image {
