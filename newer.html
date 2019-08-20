@@ -6,72 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="assets/css/new.css" type="text/css">
-
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('#example').DataTable();
-        });
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_template', this);
+            });
+        }
     </script>
-
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_UbfQMZPiQGURDwMtv5SCI");
+        })();
+    </script>
 </head>
 
 <body>
-
-    <table id="example" class="display" style="width:50%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Winnings</th>
-                <th>Wins</th>
-                <th>Rank</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>David</td>
-                <td>0.00</td>
-                <td>0</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Al</td>
-                <td>0.00</td>
-                <td>0</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>William</td>
-                <td>0.00</td>
-                <td>0</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Struan</td>
-                <td>0.00</td>
-                <td>0</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Bingham</td>
-                <td>0.00</td>
-                <td>0</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>Duffy</td>
-                <td>0.00</td>
-                <td>0</td>
-                <td>2</td>
-            </tr>
-        </tbody>
-    </table>
-
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="contact"></textarea>
+        <input type="submit" value="Send">
+    </form>
 </body>
 
 </html>

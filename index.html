@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Football Group</title>
     <link rel="icon" type="image/ico" href="assets/images/glass.png" />
@@ -199,47 +202,56 @@
 
     <!–– Body ––>
 
-    <table class="table table-bordered" align="center">
-        <thead>
-            <tr class="table-heading">
-                <th scope="col">Position</th>
-                <th scope="col">Player</th>
-                <th scope="col">Winnings</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>David</td>
-                <td>£0.00</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>William</td>
-                <td>£0.00</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Al</td>
-                <td>£0.00</td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Craig</td>
-                <td>£0.00</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Struan</td>
-                <td>£0.00</td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Duffy</td>
-                <td>£0.00</td>
-            </tr>
-        </tbody>
-    </table>
+    <center class="table-wrapper">
+        <table id="example" class="display" width="50%">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Winnings</th>
+                    <th>Wins</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>David</td>
+                    <td>£23.00</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Al</td>
+                    <td>£7.00</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>William</td>
+                    <td>£9.50</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Struan</td>
+                    <td>£1.00</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bingham</td>
+                    <td>£3.00</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Duffy</td>
+                    <td>£5.00</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
 
     <div id="C4" class="anchor-link"></div>
     <div class="mobileHide">
@@ -688,7 +700,7 @@
             { "name": '49', "lat": 53.552399, "lng": -1.46756, "status": 'Will' }, //Barnsley
             { "name": '50', "lat": 53.7286, "lng": -2.48937, "status": 'Will' }, //Blackburn
             { "name": '51', "lat": 51.474899, "lng": -0.221619, "status": 'Will' }, //Fulham
-            { "name": '32', "lat": 53.438702, "lng": -2.96619, "status": 'Will' }, //Everton
+            { "name": '32', "lat": 53.438655, "lng": -2.96619, "status": 'Will' }, //Everton
             { "name": '32', "lat": 52.054401, "lng": 1.14554, "status": 'Will' }, //Ipswich
             { "name": '32', "lat": 51.3983, "lng": -0.085455, "status": 'Will' }, // C Palace
             { "name": '32', "lat": 54.9146, "lng": -1.38837, "status": 'Will' }, // Sunderland
@@ -700,9 +712,9 @@
             { "name": '32', "lat": 50.9058, "lng": -1.39114, "status": 'Will' }, //Southampton
             { "name": '32', "lat": 53.430801, "lng": -2.96096, "status": 'Will' }, //Liverpool
             { "name": '32', "lat": 51.649799, "lng": -0.401569, "status": 'Will' }, //Watford
-            { "name": '32', "lat": 53.438702, "lng": -2.96619, "status": 'Will' }, //Everton
+            { "name": '32', "lat": 53.438701, "lng": -2.96619, "status": 'Will' }, //Everton
 
-            { "name": '33', "lat": 53.438702, "lng": -2.96619, "status": 'Duffy' }, //Everton
+            { "name": '33', "lat": 53.438780, "lng": -2.96619, "status": 'Duffy' }, //Everton
             { "name": '33', "lat": 51.649799, "lng": -0.401569, "status": 'Duffy' }, //Watford
             { "name": '33', "lat": 56.735298, "lng": -2.6565, "status": 'Duffy' }, //Brechin
             { "name": '33', "lat": 55.938801, "lng": -3.2325, "status": 'Duffy' }, //Hearts
@@ -740,7 +752,7 @@
             map.setZoom(5.2);
             clearMarkers();
             for (var j = 0; j < all.length; j++) {
-                addMarker(all[j], j * 350);
+                addMarker(all[j], j * 50);
             }
         }
 
@@ -833,10 +845,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
+            $('#example').DataTable();
         });
     </script>
 

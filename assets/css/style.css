@@ -53,7 +53,7 @@
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1.75em;
   line-height: 15px;
-  text-align: center
+  text-align: center;
  }
 
  .navbar-light .navbar-nav .nav-link {
@@ -66,30 +66,50 @@
   padding-bottom: 3px;
   padding-top: 3px;
  }
- 
+
  /*-------------------------League Table--------*/
 
- .table {
-  font-family: 'Nanum Myeongjo', serif;
-  width: 50%;
-  margin-bottom: 1rem;
-  color: #212529;
-  text-align: center;
-  font-size: 1.65em;
-  margin-top: 30px;
+ .dataTables_filter {
+  display: none;
  }
 
- .table-heading {
-  font-size: 1em;
+ label {
+  display: none;
+ }
+
+ .dataTables_info {
+  display: none;
+ }
+
+ .dataTables_wrapper .dataTables_paginate {
+  display: none;
+ }
+
+ th {
+  font-size: 1.5em;
   color: white;
   background-color: #de540f;
+  font-family: 'Nanum Myeongjo', serif;
+  text-align: center;
+ }
+
+ td {
+  font-family: 'Nanum Myeongjo', serif;
+  color: #212529;
+  text-align: center;
+  font-size: 1.5em;
+  background: white;
+  background-color: white;
+ }
+
+ table.dataTable.display tbody tr.odd>.sorting_1,
+ table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+  background-color: white;
  }
  
- @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-  .table {
-   width: 80%;
-   font-size: 1.50em;
-  }
+ .table-wrapper {
+  padding-top: 50px;
+  padding-bottom: 30px;
  }
 
  /*-------------------------Player Information--------*/
@@ -375,6 +395,15 @@
  @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
   .map-legends {
    width: 90%;
- }
+  }
  }
  
+table.dataTable.no-footer {
+    border-bottom: 0px solid #111;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .table-wrapper {
+   font-size: 0.70em;
+  }
+ }
