@@ -1,21 +1,35 @@
-html, body {
-  height: 370px;
-  padding: 0;
-  margin: 0;
-  }
-#map {
- height: 760px;
- width: 700px;
- overflow: hidden;
- float: left;
- border: thin solid #333;
+.dataTables_filter {
+ display: none;
+}
+
+label {
+ display: none;
+}
+
+.dataTables_info {
+ display: none;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+ display: none;
+}
+
+th {
+  font-size: 1.65em;
+  color: white;
+  background-color: #de540f;
+  font-family: 'Nanum Myeongjo', serif;
  }
-#capture {
- height: 360px;
- width: 480px;
- overflow: hidden;
- float: left;
- background-color: #ECECFB;
- border: thin solid #333;
- border-left: none;
+ 
+td {
+  font-family: 'Nanum Myeongjo', serif;
+  color: #212529;
+  text-align: center;
+  font-size: 1.5em;
+  background: white;
+  background-color: white;
  }
+ 
+ table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+    background-color: white;
+}

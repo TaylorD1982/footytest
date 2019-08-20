@@ -53,6 +53,7 @@
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1.75em;
   line-height: 15px;
+  text-align: center
  }
 
  .navbar-light .navbar-nav .nav-link {
@@ -65,7 +66,7 @@
   padding-bottom: 3px;
   padding-top: 3px;
  }
-
+ 
  /*-------------------------League Table--------*/
 
  .table {
@@ -307,11 +308,6 @@
   line-height: 50px;
  }
 
- #parent img {
-  vertical-align: middle;
-    bottom: 0;
- }
-
  .trophy-image {
   padding-top: 100px;
  }
@@ -381,3 +377,4 @@
    width: 90%;
  }
  }
+ 
