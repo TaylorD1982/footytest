@@ -11,18 +11,18 @@
     <script type="text/javascript" src="assets/style.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    
+
     <title>Football Group</title>
-    
+
     <link rel="icon" type="image/ico" href="assets/images/glass.png" />
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -167,20 +167,20 @@
 
 <body>
 
-    <!–– Header ––>#
-    
+    <!–– Header ––>
+
     <!–– Banner to be shown on smaller screens ––>
 
     <div class="mobileShow">
         <img width="100%" src="assets/images/Banner.png" alt="Football League">
     </div>
-    
+
     <!–– Banner to be shown on larger screens ––>
 
     <div class="mobileHide">
         <img width="100%" src="assets/images/BannerDesktop.png" alt="Football League">
     </div>
-    
+
     <!–– Navigation Bar ––>
 
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -214,53 +214,53 @@
         <table id="example" class="display" width="50%">
             <thead>
                 <tr>
-                    <th>Rank</th>
                     <th>Name</th>
                     <th>Winnings</th>
                     <th>Wins</th>
+                    <th>Defecit</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
                     <td>David</td>
                     <td>£23.00</td>
                     <td>3</td>
+                    <td>£0.00</td>
                 </tr>
                 <tr>
-                    <td>3</td>
                     <td>Al</td>
                     <td>£7.00</td>
                     <td>1</td>
+                    <td>£16.00</td>
                 </tr>
                 <tr>
-                    <td>2</td>
                     <td>William</td>
                     <td>£9.50</td>
                     <td>1</td>
+                    <td>£13.50</td>
                 </tr>
                 <tr>
-                    <td>6</td>
                     <td>Struan</td>
                     <td>£1.00</td>
                     <td>1</td>
+                    <td>£22.00</td>
                 </tr>
                 <tr>
-                    <td>5</td>
                     <td>Bingham</td>
                     <td>£3.00</td>
                     <td>2</td>
+                    <td>£20.00</td>
                 </tr>
                 <tr>
-                    <td>4</td>
                     <td>Duffy</td>
                     <td>£5.00</td>
-                    <td>0</td>
+                    <td>1</td>
+                    <td>£18.00</td>
                 </tr>
             </tbody>
         </table>
     </center>
-    
+
     <!–– Headings for player information buttons ––>
 
     <div id="C4" class="anchor-link"></div>
@@ -271,7 +271,7 @@
     <div class="mobileShow">
         <img width="100%" src="assets/images/playerMobile.png" alt="Player Information">
     </div>
-    
+
     <!–– Buttons ––>
 
     <div class="container">
@@ -307,7 +307,7 @@
                                     <div id="parent" class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
-                                            <img class="trophy-image" width="80%" src="assets/images/willTrophies.png" alt="Player Information">
+                                            <img class="trophy-image" width="80%" src="assets/images/willTrophies.png" alt="Player Information" data-toggle="tooltip" title="2016 / 2017 League Winner & 2018 / 2019 League Winner">
                                         </blockquote>
                                     </div>
                                 </div>
@@ -355,7 +355,7 @@
                                 <div id="parent" class="col-12 col-md-6">
                                     <blockquote>
                                         <h3 class="trophy-heading">Trophy Cabinet</h3>
-                                        <div><img class="trophy-image" width="80%" src="assets/images/alTrophies.png" alt="Player Information"></div>
+                                        <div><img class="trophy-image" width="80%" src="assets/images/alTrophies.png" alt="Player Information" data-toggle="tooltip" title="2018 / 2019 Super 6 Champion"></div>
                                     </blockquote>
                                 </div>
                             </div>
@@ -403,7 +403,7 @@
                                     <div id="parent" class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
-                                            <div><img class="trophy-image" width="80%" src="assets/images/davidTrophies.png" alt="Player Information"></div>
+                                            <div><img class="trophy-image" width="80%" src="assets/images/davidTrophies.png" alt="Player Information" data-toggle="tooltip" title="2017 / 2018 League Winner & 2017 / 2018 Super 6 Winner"></div>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -572,7 +572,7 @@
             </div>
         </div>
     </div>
-    
+
     <!–– Headings for Group Statistics charts ––>
 
     <div id="C5" class="anchor-link"></div>
@@ -621,7 +621,7 @@
             </div>
         </div>
     </div>
-    
+
     <!–– Google Map of football stadium locations ––>
 
     <div id="C7" class="anchor-link"></div>
@@ -814,7 +814,7 @@
 
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    
+
     <!–– Headings for Contact Form ––>
 
     <div id="C6" class="anchor-link"></div>
@@ -831,13 +831,13 @@
 
     <form onsubmit="return sendMail(this);">
         <div class="form-group">
-        <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
+            <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required/>
         </div>
         <div class="form-group">
-        <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
+            <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email" required/>
         </div>
         <div class="form-group">
-        <textarea rows="8" name="query" class="form-control" id="query" placeholder="Enter your enquiry here" required></textarea>
+            <textarea rows="8" name="query" class="form-control" id="query" placeholder="Enter your enquiry here" required></textarea>
         </div>
         <button type="submit" class="btn btn-success center-block">Send message</button>
     </form>
