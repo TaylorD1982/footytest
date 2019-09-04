@@ -128,6 +128,15 @@
                 [1, 0, 0, 0, 0, 0, 0],
                 [2, 0, 0, 0, 0, 0, 0],
                 [3, 0, 0, 0, 0, 0, 0],
+                [4, 0, 0, 0, 0, 0, 0],
+                [5, 0, 0, 0, 0, 0, 0],
+                [6, 3.48, 0, 0, 0, 0, 0],
+                [7, 3.48, 0, 0, 0, 0, 0],
+                [8, 3.48, 0, 0, 0, 15, 0],
+                [9, 3.48, 0, 12, 0, 15, 0],
+                [10, 13, 0, 12, 23, 15, 0],
+                [11, 13, 5, 12, 23, 37, 0],
+                [12, 13, 5, 24, 23, 37, 10],
             ]);
 
             var options = {
@@ -316,7 +325,7 @@
                             </div>
                         </section>
                         <script>
-                            var will = ["31 / 1", "Barnsley", "-£10", "£233", "Champion", "6th"];
+                            var will = ["28 / 1", "Leeds United", "-£10", "£233", "Champion", "6th"];
                             document.getElementById("willStats1").innerHTML = will[0];
                             document.getElementById("willStats2").innerHTML = will[1];
                             document.getElementById("willStats3").innerHTML = will[2];
@@ -412,7 +421,7 @@
                             </div>
                         </section>
                         <script>
-                            var david = ["3.4 / 1", "Blackburn Rovers", "-£10", "£246", "Champion", "Fifth"];
+                            var david = ["9 / 1", "Blackburn Rovers", "-£10", "£246", "Champion", "Fifth"];
                             document.getElementById("davidStats1").innerHTML = david[0];
                             document.getElementById("davidStats2").innerHTML = david[1];
                             document.getElementById("davidStats3").innerHTML = david[2];
@@ -463,7 +472,7 @@
                             </div>
                         </section>
                         <script>
-                            var struan = ["10 / 1", "Brighton", "-£8", "£132", "3rd", "4th"];
+                            var struan = ["13 / 1", "Brighton", "-£8", "£132", "3rd", "4th"];
                             document.getElementById("struanStats1").innerHTML = struan[0];
                             document.getElementById("struanStats2").innerHTML = struan[1];
                             document.getElementById("struanStats3").innerHTML = struan[2];
@@ -512,7 +521,7 @@
                             </div>
                         </section>
                         <script>
-                            var bingham = ["39 / 1", "Brighton", "-£10", "£142", "3rd", "6th"];
+                            var bingham = ["33 / 1", "Brighton", "-£10", "£142", "3rd", "6th"];
                             document.getElementById("binghamStats1").innerHTML = bingham[0];
                             document.getElementById("binghamStats2").innerHTML = bingham[1];
                             document.getElementById("binghamStats3").innerHTML = bingham[2];
@@ -561,7 +570,7 @@
                             </div>
                         </section>
                         <script>
-                            var duffy = ["141 / 1", "Sheffield United", "-£10", "£217", "2nd", "5th"];
+                            var duffy = ["126 / 1", "Sheffield United", "-£10", "£217", "2nd", "5th"];
                             document.getElementById("duffyStats1").innerHTML = duffy[0];
                             document.getElementById("duffyStats2").innerHTML = duffy[1];
                             document.getElementById("duffyStats3").innerHTML = duffy[2];
@@ -662,16 +671,18 @@
             { "name": 'David, Fulham, Selected 2 times', "lat": 51.474899, "lng": -0.222, "status": 'David' }, //Fulham
             { "name": 'David, Wigan Athletic, Selected 2 times', "lat": 53.547699, "lng": -2.654, "status": 'David' }, //wigan
             { "name": 'David, Leeds, Selected 2 times', "lat": 53.7775, "lng": -1.573, "status": 'David' }, //Leeds
+            { "name": 'David, Bournemouth, Selected 2 times', "lat": 50.7352, "lng": -1.838, "status": 'David' }, //Bournemouth
 
             { "name": 'Al, Celtic, Selected 2 times', "lat": 55.849701, "lng": -4.205, "status": 'Al' }, //Celtic
             { "name": 'Al, Sunderland, Selected 2 times', "lat": 54.9146, "lng": -1.389, "status": 'Al' }, //Sunderland
             { "name": 'Al, Bolton, Selected 3 times', "lat": 53.580502, "lng": -2.535, "status": 'Al' }, //Bolton
             { "name": 'Al, Falkirk, Selected 3 times', "lat": 56.005299, "lng": -3.752, "status": 'Al' }, //Falkirk
             { "name": 'Al, Cove, Selected 2 times', "lat": 51.2999655, "lng": -0.763, "status": 'Al' }, //Cove
+            { "name": 'Al, Ipswich, Selected 2 times', "lat": 52.0544, "lng": 1.145, "status": 'Al' }, //Ipswich
 
             { "name": 'Bingham, Cove, Selected 2 times', "lat": 51.2999655, "lng": -0.762, "status": 'Bing' }, //Cove
             { "name": 'Bingham, Fulham, Selected 2 times', "lat": 51.474899, "lng": -0.220, "status": 'Bing' }, //Fulham
-            { "name": 'Bingham, Fulham, Selected 2 times', "lat": 50.9058, "lng": -1.391, "status": 'Bing' }, //Southampton
+            { "name": 'Bingham, Southampton, Selected 2 times', "lat": 50.9058, "lng": -1.391, "status": 'Bing' }, //Southampton
             { "name": 'Bingham, Brighton, Selected 2 times', "lat": 50.8609, "lng": -0.080, "status": 'Bing' }, //Brighton
             { "name": 'Bingham, Wimbledon, Selected 2 times', "lat": 51.4051, "lng": -0.281984, "status": 'Bing' }, //Wimbledon
             
@@ -683,13 +694,14 @@
             { "name": 'Will, Fulham, Selected 2 times', "lat": 51.474899, "lng": -0.221, "status": 'Will' }, //Fulham
             { "name": 'Will, Everton, Selected 2 times', "lat": 53.438655, "lng": -2.966, "status": 'Will' }, //Everton
             { "name": 'Will, Sunderland, Selected 2 times', "lat": 54.9146, "lng": -1.388, "status": 'Will' }, // Sunderland
-            { "name": 'Will, Leeds, Selected 2 times', "lat": 53.7775, "lng": -1.572, "status": 'Will' }, //Leeds
+            { "name": 'Will, Leeds, Selected 3 times', "lat": 53.7775, "lng": -1.572, "status": 'Will' }, //Leeds
             { "name": 'Will, Sheffield Utd, Selected 2 times', "lat": 53.3703, "lng": -1.471, "status": 'Will' }, //Shefield Utd
             { "name": 'Will, Leicester, Selected 2 times', "lat": 52.6203, "lng": -1.142, "status": 'Will' }, //Leicester
             { "name": 'Will, Bournemouth, Selected 2 times', "lat": 50.7352, "lng": -1.838, "status": 'Will' }, //Bournemouth
-
+            { "name": 'Will, Ipswich, Selected 2 times', "lat": 52.0544, "lng": 1.144, "status": 'Will' }, //Ipswich
 
             { "name": 'Duffy, Sheffield Utd, Selected 2 times', "lat": 53.3703, "lng": -1.470, "status": 'Duffy' }, //Shefield Utd
+            { "name": 'Duffy, Raith Rovers, Selected 2 times', "lat": 56.0999, "lng": -3.169, "status": 'Duffy' }, //Raith
 
 
 
