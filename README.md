@@ -145,8 +145,9 @@ For any scenarios that have not been automated, test the user stories manually a
 <ol>
 <li>Player hovers their mouse over the button and it expands slightly in size.</li>
 <li>Player clicks on the button and it returned to the top of the page.</li>
+</ol>
 
-<h3>Performance on different sized screens</h3>
+<h3>Performance on different devices</h3>
 
 <img width="100%" src="assets/images/devices.png">
 
@@ -166,20 +167,20 @@ For any scenarios that have not been automated, test the user stories manually a
 <li>There is an issue with the map markers, where they appear at their final location for a fraction of a second before dropping down to that location. I have yet to resolve this bug.</li>
 </ul>
 
-Deployment
+<h2>Deployment</h2>
 
-This section should describe the process you went through to deploy the project to a hosting platform.
+<p>The project has been deployed on GitHub Pages (https://taylord1982.github.io/footytest/#).</p>
+<p>For the site to function correctly when published from Github, it was necessary to enter settings > Github Pages and change 
+the source to Master Branch.</p> 
 
-The site has been deployed on Git Pages
 
-Credits
+<h2>Credits</h2>
 
-Media
+<h3>Media</h3>
 
-· The images of the whisky glasses were obtained from
+<p>The photos used in this site were obtained from https://www.robertdyas.co.uk</p>
+<p>I used https://www.font-generator.com/ to create the site's logo.</p>
 
-· The image of Lionel Messi came from
+<h3>Acknowledgements</h3>
 
-Acknowledgements
-
-· I received inspiration for this project from X
+<p>I’d like to thank those on Slack who assisted me with a few issues when I was unable to find the solutions on Google or by experimentation. In particular Anna Greaves and my mentor Seun provided valuable assistance and support.</p>
