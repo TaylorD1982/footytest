@@ -94,7 +94,7 @@
 
  .table-wrapper {
   padding-top: 1px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
  }
 
  table.dataTable.no-footer {
@@ -390,4 +390,8 @@
  .footer {
   margin-bottom: 50px;
  }
- 
+
+
+.anchor-link {
+ padding-bottom: 50px;
+}
