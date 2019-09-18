@@ -1,18 +1,26 @@
-Football Betting Group 2019/2020
+<h1>Football Betting Group 2019/2020</h1>
 
-Six friends take part in an annual contest in which they place a £2 accumulator bet on the weekend’s football matches. At the end of the season, the contestant with the highest total winnings is declared champion. The purpose of this site is to provide is to provide metrics and statistics in an attractive, user-friendly way.
+<p>Six friends take part in an annual contest in which they place a £2 accumulator bet on the weekend’s football matches. 
+At the end of the season, the contestant with the highest total winnings is declared champion.</p> 
 
-UX
+<p>The purpose of this site is to provide is to provide metrics and statistics in an attractive, user-friendly way.</p>
 
-The site has a simple, clean, layout with a limited colour-scheme of black and grey contrasted with a more vibrant orange. The majority of the screen will be filed with white, drawing the user’s attention to the various elements of the site.
+<h2>UX</h2>
 
-The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes.
+<p>The site has a simple, clean, layout with a limited colour-scheme of black and grey contrasted with a more vibrant orange. 
+The majority of the screen will be filed with white, drawing the user’s attention to the various elements of the site.</p>
 
-The visitors to the site will be the six participants in the contest. The site’s primary function is to display a table showing the current standings of the competition and so this element has been placed at the top of the page.
+<p>The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes.</p>
 
-The league table is supplemented with other performance metrics, which focus on individual participants as well as the group as a whole. The buttons and graphs are designed to be colorful and easy to understand.
+<img width="100%" src="assets/images/WIRE.png">
 
-USER STORIES
+<p>The visitors to the site will be the six participants in the contest. The site’s primary function is to display a table showing the current 
+standings of the competition and so this element has been placed at the top of the page.</p>
+
+<p>The league table is supplemented with other performance metrics, which focus on individual participants as well as the group as a whole. 
+The buttons and graphs are designed to be colorful and easy to understand.</p>
+
+<h3>USER STORIES</h3>
 
 Below are a number of scenarios, which demonstrate how a visitor to the site might navigate through the various sections.
 
