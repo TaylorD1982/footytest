@@ -3,22 +3,21 @@
 <p>Six friends take part in an annual contest in which they place a £2 accumulator bet on the weekend’s football matches. 
 At the end of the season, the contestant with the highest total winnings is declared champion.</p> 
 
-<p>The purpose of this site is to provide is to provide metrics and statistics in an attractive, user-friendly way.</p>
+<p>The purpose of this site is to present a series of metrics and statistics in an attractive, easy to understand way.</p>
 
 <h2>UX</h2>
 
-<p>The site has a simple, clean, layout with a limited colour-scheme of black and grey contrasted with a more vibrant orange. 
+<p>The site has a simple, clean layout with a limited colour-scheme of black and grey contrasted with a more vibrant orange. 
 The majority of the screen will be filed with white, drawing the user’s attention to the various elements of the site.</p>
 
-<p>The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes.</p>
+<p>The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes that were made during development.</p>
 
 <img width="100%" src="assets/images/WIRE.png">
 
-<p>The visitors to the site will be the six participants in the contest. The site’s primary function is to display a table showing the current 
-standings of the competition and so this element has been placed at the top of the page.</p>
+<p>The visitors to the site will be the six participants in the contest. The site’s primary function is to display a "league table" showing the current 
+standings of the competitors and so this element has been placed at the top of the page.</p>
 
-<p>The league table is supplemented with other performance metrics, which focus on individual participants as well as the group as a whole. 
-The buttons and graphs are designed to be colorful and easy to understand.</p>
+<p>The league table is supplemented with other performance metrics, which focus on individual participants as well as the group as a whole.</p>
 
 <h3>USER STORIES</h3>
 
@@ -85,7 +84,7 @@ and is taken down to that sections of the site. He sees that the second chart di
 <h2>Testing</h2>
 
 <p>The HTML code was tested in The W3C Markup Validation Service (https://validator.w3.org). A number of errors were identified and corrected, 
-however there were a number of issues which I found broke the site. I have detailed these below:</p>
+however there were a number of issues which I found broke the site when I attempted to correct them. I have detailed these below:</p>
 
 <ol>
 <li><b>Warning: "The type attribute is unnecessary for JavaScript resources"</b> - I found that removing the type attribute caused the JavaScript to stop working so I left this in.</li>
