@@ -72,7 +72,7 @@ and is taken down to that sections of the site. He sees that the second chart di
 <h2>Technologies Used</h2>
 
 <ul>
-<li>Tabulator (www.tabulator.info) Used to create the site's league table.</li> 
+<li>Data Tables (https://datatables.net) Used to create the site's league table.</li> 
 <li>Google Charts (www.developers.google.com/chart) Used to create the site's graphs in the 'Group Statistics' section.</li> 
 <li>JQuery (www.jquery.com) The project uses JQuery to simplify DOM manipulation.</li>
 <li>Google Fonts (www.fonts.google.com) The typeface used throughout the site uses Google Fonts.</li>
@@ -84,11 +84,17 @@ and is taken down to that sections of the site. He sees that the second chart di
 
 <h2>Testing</h2>
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+<p>The HTML code was tested in The W3C Markup Validation Service (https://validator.w3.org). A number of errors were identified and corrected, 
+however there were a number of issues which I found broke the site. I have detailed these below:</p>
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+<ol>
+<li><b>Warning: "The type attribute is unnecessary for JavaScript resources"</b> - I found that removing the type attribute caused the JavaScript to stop working so I left this in.</li>
+<li><b>Error: "Bad value 100% for attribute width"</b> - I found no way to replicate my desired outcome using anything other than the % attribute</li>
+<li><b>Error: "The width attribute on the table element is obsolete. Use CSS instead"</b> - I found no way to replicate my desired outcome using CSS</li>
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+</ol>
+
+<h3>Step-by-step testing of the site's functionality</h3>
 
 <h4>Navigation Bar</h4>
 

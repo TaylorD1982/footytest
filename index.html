@@ -35,6 +35,8 @@
         google.charts.setOnLoadCallback(drawChartThree);
         google.charts.setOnLoadCallback(drawChartFour);
 
+        // All time winnings breakdown chart
+
         function drawChartOne() {
 
             var data = google.visualization.arrayToDataTable([
@@ -51,11 +53,15 @@
             chart.draw(data, options);
         }
 
+        // Profit versus the bookmakers chart
+
         function drawChartTwo() {
 
             var data = new google.visualization.DataTable();
             data.addColumn('number', 'Game Day');
             data.addColumn('number', 'profit');
+
+            // Stats - Week / £ total
 
             data.addRows([
                 [0, 0],
@@ -90,11 +96,13 @@
             chart.draw(data, options);
         }
 
+        // League breakdown chart
+
         function drawChartFour() {
 
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'picks'],
-                ['English Premier League',20],
+                ['English Premier League', 20],
                 ['English Championship', 45],
                 ['English League 1', 12],
                 ['English League 2', 4],
@@ -114,6 +122,8 @@
             var chart = new google.visualization.PieChart(document.getElementById('fourth_chart_div'));
             chart.draw(data, options);
         }
+
+        // total winnings line chart
 
         function drawChartThree() {
 
@@ -168,6 +178,8 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
+        // Email JS Javascript. Required for the contact form.
+
         (function() {
             emailjs.init("user_UbfQMZPiQGURDwMtv5SCI");
         })();
@@ -176,21 +188,21 @@
 
 <body>
 
-    <!–– Header ––>
+    <!-- Header -->
 
-    <!–– Banner to be shown on smaller screens ––>
+    <!-- Banner to be shown on smaller screens -->
 
     <div class="mobileShow">
         <img width="100%" src="assets/images/Banner.png" alt="Football League">
     </div>
 
-    <!–– Banner to be shown on larger screens ––>
+    <!-- Banner to be shown on larger screens -->
 
     <div class="mobileHide">
         <img width="100%" src="assets/images/BannerDesktop.png" alt="Football League">
     </div>
 
-    <!–– Navigation Bar ––>
+    <!-- Navigation Bar -->
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -217,9 +229,9 @@
         </div>
     </nav>
 
-    <!–– League Table ––>
+    <!-- League Table -->
 
-    <center class="table-wrapper">
+    <div class="table-wrapper">
         <table id="example" class="display" width="50%">
             <thead>
                 <tr>
@@ -268,9 +280,9 @@
                 </tr>
             </tbody>
         </table>
-    </center>
+    </div>
 
-    <!–– Headings for player information buttons ––>
+    <!-- Headings for player information buttons -->
 
     <div id="C4" class="anchor-link"></div>
     <div class="mobileHide">
@@ -281,7 +293,7 @@
         <img width="100%" src="assets/images/playerMobile.png" alt="Player Information">
     </div>
 
-    <!–– Buttons ––>
+    <!-- Buttons -->
 
     <div class="container">
         <div class="row">
@@ -297,14 +309,14 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1 class="modalHeading">2019 / 2020</h1>
+                                            <h2 class="modalHeading">2019 / 2020</h2>
                                             <h2 class="modalSubHeading">Average odds</h2>
                                             <p id="willStats1" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Favourite Team</h2>
                                             <p id="willStats2" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Total Profit</h2>
                                             <p id="willStats3" class="modalSubText"></p>
-                                            <h1 class="modalHeading">All Time</h1>
+                                            <h2 class="modalHeading">All Time</h2>
                                             <h2 class="modalSubHeading">Total Winnings</h2>
                                             <p id="willStats4" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Highest Finish</h2>
@@ -313,7 +325,7 @@
                                             <p id="willStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
-                                    <div id="parent" class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
                                             <img class="trophy-image" width="80%" src="assets/images/willTrophies.png" alt="Will Trophies" data-toggle="tooltip" title="2016 / 2017 League Winner & 2018 / 2019 League Winner">
@@ -323,6 +335,7 @@
                             </div>
                         </section>
                         <script>
+                            // William's modal player information
                             var will = ["26 / 1", "Leeds United", "-£14", "£233", "Champion", "6th"];
                             document.getElementById("willStats1").innerHTML = will[0];
                             document.getElementById("willStats2").innerHTML = will[1];
@@ -345,14 +358,14 @@
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <blockquote>
-                                        <h1 class="modalHeading">2019 / 2020</h1>
+                                        <h2 class="modalHeading">2019 / 2020</h2>
                                         <h2 class="modalSubHeading">Average odds</h2>
                                         <p id="alStats1" class="modalSubText"></p>
                                         <h2 class="modalSubHeading">Favourite Team</h2>
                                         <p id="alStats2" class="modalSubText"></p>
                                         <h2 class="modalSubHeading">Total Profit</h2>
                                         <p id="alStats3" class="modalSubText"></p>
-                                        <h1 class="modalHeading">All Time</h1>
+                                        <h2 class="modalHeading">All Time</h2>
                                         <h2 class="modalSubHeading">Total Winnings</h2>
                                         <p id="alStats4" class="modalSubText"></p>
                                         <h2 class="modalSubHeading">Highest Finish</h2>
@@ -361,7 +374,7 @@
                                         <p id="alStats6" class="modalSubText"></p>
                                     </blockquote>
                                 </div>
-                                <div id="parent" class="col-12 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <blockquote>
                                         <h3 class="trophy-heading">Trophy Cabinet</h3>
                                         <div><img class="trophy-image" width="80%" src="assets/images/alTrophies.png" alt="Al Trophies" data-toggle="tooltip" title="2018 / 2019 Super 6 Champion"></div>
@@ -370,6 +383,7 @@
                             </div>
                         </div>
                         <script>
+                            // William's modal player information
                             var al = ["1.4 / 1", "Bolton Wanderers", "-£9.77", "£243", "2nd", "4th"];
                             document.getElementById("alStats1").innerHTML = al[0];
                             document.getElementById("alStats2").innerHTML = al[1];
@@ -393,14 +407,14 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1 class="modalHeading">2019 / 2020</h1>
+                                            <h2 class="modalHeading">2019 / 2020</h2>
                                             <h2 class="modalSubHeading">Average odds</h2>
                                             <p id="davidStats1" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Favourite Team</h2>
                                             <p id="davidStats2" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Total Profit</h2>
                                             <p id="davidStats3" class="modalSubText"></p>
-                                            <h1 class="modalHeading">All Time</h1>
+                                            <h2 class="modalHeading">All Time</h2>
                                             <h2 class="modalSubHeading">Total Winnings</h2>
                                             <p id="davidStats4" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Highest Finish</h2>
@@ -409,7 +423,7 @@
                                             <p id="davidStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
-                                    <div id="parent" class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
                                             <div><img class="trophy-image" width="80%" src="assets/images/davidTrophies.png" alt="David Trophies" data-toggle="tooltip" title="2017 / 2018 League Winner & 2017 / 2018 Super 6 Winner"></div>
@@ -419,6 +433,7 @@
                             </div>
                         </section>
                         <script>
+                            // William's modal player information
                             var david = ["8 / 1", "Blackburn Rovers", "-£0.99", "£256", "Champion", "Fifth"];
                             document.getElementById("davidStats1").innerHTML = david[0];
                             document.getElementById("davidStats2").innerHTML = david[1];
@@ -444,14 +459,14 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1 class="modalHeading">2019 / 2020</h1>
+                                            <h2 class="modalHeading">2019 / 2020</h2>
                                             <h2 class="modalSubHeading">Average odds</h2>
                                             <p id="struanStats1" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Favourite Team</h2>
                                             <p id="struanStats2" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Total Profit</h2>
                                             <p id="struanStats3" class="modalSubText"></p>
-                                            <h1 class="modalHeading">All Time</h1>
+                                            <h2 class="modalHeading">All Time</h2>
                                             <h2 class="modalSubHeading">Total Winnings</h2>
                                             <p id="struanStats4" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Highest Finish</h2>
@@ -460,7 +475,7 @@
                                             <p id="struanStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
-                                    <div id="parent" class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
                                             <div class="image-anchor"><img class="trophy-image" width="80%" src="assets/images/notrophies.png" alt="Struan Trophies"></div>
@@ -470,6 +485,7 @@
                             </div>
                         </section>
                         <script>
+                            // William's modal player information
                             var struan = ["14 / 1", "Brighton", "-£12", "£132", "3rd", "4th"];
                             document.getElementById("struanStats1").innerHTML = struan[0];
                             document.getElementById("struanStats2").innerHTML = struan[1];
@@ -493,14 +509,14 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1 class="modalHeading">2019 / 2020</h1>
+                                            <h2 class="modalHeading">2019 / 2020</h2>
                                             <h2 class="modalSubHeading">Average odds</h2>
                                             <p id="binghamStats1" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Favourite Team</h2>
                                             <p id="binghamStats2" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Total Profit</h2>
                                             <p id="binghamStats3" class="modalSubText"></p>
-                                            <h1 class="modalHeading">All Time</h1>
+                                            <h2 class="modalHeading">All Time</h2>
                                             <h2 class="modalSubHeading">Total Winnings</h2>
                                             <p id="binghamStats4" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Highest Finish</h2>
@@ -509,7 +525,7 @@
                                             <p id="binghamStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
-                                    <div id="parent" class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
                                             <div><img class="trophy-image" width="80%" src="assets/images/notrophies.png" alt="Bingham Trophies"></div>
@@ -519,6 +535,7 @@
                             </div>
                         </section>
                         <script>
+                            // William's modal player information
                             var bingham = ["30 / 1", "Brighton", "-£14", "£142", "3rd", "6th"];
                             document.getElementById("binghamStats1").innerHTML = bingham[0];
                             document.getElementById("binghamStats2").innerHTML = bingham[1];
@@ -542,14 +559,14 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <blockquote>
-                                            <h1 class="modalHeading">2019 / 2020</h1>
+                                            <h2 class="modalHeading">2019 / 2020</h2>
                                             <h2 class="modalSubHeading">Average odds</h2>
                                             <p id="duffyStats1" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Favourite Team</h2>
                                             <p id="duffyStats2" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Total Profit</h2>
                                             <p id="duffyStats3" class="modalSubText"></p>
-                                            <h1 class="modalHeading">All Time</h1>
+                                            <h2 class="modalHeading">All Time</h2>
                                             <h2 class="modalSubHeading">Total Winnings</h2>
                                             <p id="duffyStats4" class="modalSubText"></p>
                                             <h2 class="modalSubHeading">Highest Finish</h2>
@@ -558,7 +575,7 @@
                                             <p id="duffyStats6" class="modalSubText"></p>
                                         </blockquote>
                                     </div>
-                                    <div id="parent" class="col-12 col-md-6">
+                                    <div class="col-12 col-md-6">
                                         <blockquote>
                                             <h3 class="trophy-heading">Trophy Cabinet</h3>
                                             <div><img class="trophy-image" width="80%" src="assets/images/notrophies.png" alt="Duffy Trophies"></div>
@@ -568,6 +585,7 @@
                             </div>
                         </section>
                         <script>
+                            // William's modal player information
                             var duffy = ["120 / 1", "Sheffield United", "-£14", "£217", "2nd", "5th"];
                             document.getElementById("duffyStats1").innerHTML = duffy[0];
                             document.getElementById("duffyStats2").innerHTML = duffy[1];
@@ -582,7 +600,7 @@
         </div>
     </div>
 
-    <!–– Headings for Group Statistics charts ––>
+    <!-- Headings for Group Statistics charts -->
 
     <div id="C5" class="anchor-link"></div>
 
@@ -631,7 +649,7 @@
         </div>
     </div>
 
-    <!–– Google Map of football stadium locations ––>
+    <!-- Google Map of football stadium locations -->
 
     <div id="C7" class="anchor-link"></div>
 
@@ -647,8 +665,8 @@
 
     <center>
         <br>
-        <button type="submit" class="btn btn-success" onclick="drop();" align="center">
-        <p>Click Here</p>
+        <button type="submit" class="btn btn-success" onclick="drop();">
+        Click Here
     </button>
     </center>
 
@@ -662,7 +680,7 @@
         <div id="map"></div>
     </center>
 
-    <!–– Headings for Contact Form ––>
+    <!-- Headings for Contact Form -->
 
     <div id="C6" class="anchor-link"></div>
 
@@ -689,7 +707,7 @@
         <button type="submit" class="btn btn-success">Send message</button>
     </form>
 
-    <!–– Footer ––>
+    <!-- Footer -->
 
     <div align="center" class="footer">
         <a href="#" class="item">
@@ -703,8 +721,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <script>
+        // Datatable League Table Javascript
+
         $(document).ready(function() {
             $('#example').DataTable({
                 "order": [

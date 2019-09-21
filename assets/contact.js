@@ -2,14 +2,14 @@ function sendMail(contactForm) {
     emailjs.send("gmail", "football_site", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
-        "project_request": contactForm.projectsummary.value
+        "query": contactForm.query.value
     })
     .then(
         function(response) {
-            console.log("SUCCESS", response);
+            console.log("Good", response);
         },
         function(error) {
-            console.log("FAILED", error);
+            console.log("bad", error);
         }
     );
     return false;  // To block from loading a new page

@@ -95,6 +95,7 @@
  .table-wrapper {
   padding-top: 1px;
   padding-bottom: 20px;
+  
  }
 
  table.dataTable.no-footer {
@@ -333,10 +334,6 @@
  #First_chart_div {
   display: inline-block;
   margin: 0 auto;
- }
-
- #parent {
-  line-height: 50px;
  }
 
  .chart {
