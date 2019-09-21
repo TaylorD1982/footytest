@@ -13,12 +13,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
@@ -26,6 +22,8 @@
 
     <link rel="icon" type="image/ico" href="assets/images/glass.png" />
 
+    <!-- Javascript for charts -->
+    
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', { 'packages': ['corechart'] });
@@ -44,7 +42,7 @@
                 ['2016 / 2017', 89.71, 116.79, 90.76, 40.65, 0, 118.98],
                 ['2017 / 2018', 41.87, 123.19, 18.49, 84.76, 57.26, 0],
                 ['2018/ 2019', 107.96, 66.30, 34.14, 92.70, 74.26, 114.16],
-                ['2019 / 2020', 4.23, 11.01, 0, 0, 0, 0],
+                ['2019 / 2020', 45.10, 13.76, 77.44, 0, 33.75, 16.66],
             ]);
 
             var options = { height: 300, width: '100%', legend: 'none', isStacked: true };
@@ -72,6 +70,14 @@
                 [5, -48],
                 [6, -51.91],
                 [7, -54.76],
+                [8, -54.76],
+                [9, -54.76],
+                [10, -61.44],
+                [11, -77.86],
+                [12, -5.67],
+                [13, -23.99],
+                [14, -11.23],
+                [15, 6.71],
             ]);
 
             var options = {
@@ -138,13 +144,21 @@
 
             data.addRows([
                 [0, 0, 0, 0, 0, 0, 0],
-                [1, 0, 0, 0, 0, 0, 0],
-                [2, 0, 0, 0, 0, 0, 0],
-                [3, 0, 0, 0, 0, 0, 0],
-                [4, 0, 0, 0, 0, 0, 0],
-                [5, 0, 0, 0, 0, 0, 0],
-                [6, 0, 6.09, 0, 0, 0, 0],
-                [7, 4.23, 11.01, 0, 0, 0, 0],
+                [1, 0, 0, 77.44, 0, 0, 0],
+                [2, 0, 0, 77.44, 0, 0, 0],
+                [3, 0, 0, 77.44, 0, 0, 0],
+                [4, 0, 0, 77.44, 0, 0, 0],
+                [5, 0, 0, 77.44, 0, 0, 3.49],
+                [6, 0, 6.09, 77.44, 0, 0, 3.49],
+                [7, 4.23, 11.01, 77.44, 0, 0, 6.30],
+                [8, 4.23, 11.01, 77.44, 0, 0, 6.30],
+                [9, 4.23, 11.01, 77.44, 0, 0, 6.30],
+                [10, 11.55, 11.01, 77.44, 0, 0, 6.30],
+                [11, 11.55, 11.01, 77.44, 0, 14.55, 6.30],
+                [12, 11.55, 11.01, 77.44, 0, 33.75, 16.66],
+                [13, 30.13, 11.01, 77.44, 0, 33.75, 16.66],
+                [14, 30.13, 11.01, 77.44, 0, 33.75, 16.66],
+                [15, 45.10, 13.76, 77.44, 0, 33.75, 16.66],
             ]);
 
             var options = {
@@ -244,39 +258,39 @@
             <tbody>
                 <tr>
                     <td>David</td>
-                    <td>£11.01</td>
-                    <td>2</td>
-                    <td>£0.00</td>
+                    <td>£13.76</td>
+                    <td>3</td>
+                    <td>£63.68</td>
                 </tr>
                 <tr>
                     <td>Al</td>
-                    <td>£4.23</td>
-                    <td>1</td>
-                    <td>£6.78</td>
+                    <td>£45.10</td>
+                    <td>4</td>
+                    <td>£32.34</td>
                 </tr>
                 <tr>
                     <td>William</td>
-                    <td>£0.00</td>
-                    <td>0</td>
-                    <td>£11.01</td>
+                    <td>£16.66</td>
+                    <td>3</td>
+                    <td>£60.78</td>
                 </tr>
                 <tr>
                     <td>Struan</td>
-                    <td>£0.00</td>
-                    <td>0</td>
-                    <td>£11.01</td>
+                    <td>£33.75</td>
+                    <td>2</td>
+                    <td>£43.69</td>
                 </tr>
                 <tr>
                     <td>Bingham</td>
+                    <td>£77.44</td>
+                    <td>1</td>
                     <td>£0.00</td>
-                    <td>0</td>
-                    <td>£11.01</td>
                 </tr>
                 <tr>
                     <td>Duffy</td>
                     <td>£0.00</td>
                     <td>0</td>
-                    <td>£11.01</td>
+                    <td>£77.44</td>
                 </tr>
             </tbody>
         </table>
@@ -336,7 +350,7 @@
                         </section>
                         <script>
                             // William's modal player information
-                            var will = ["26 / 1", "Leeds United", "-£14", "£233", "Champion", "6th"];
+                            var will = ["26 / 1", "Leeds United", "-£13.34", "£250", "Champion", "6th"];
                             document.getElementById("willStats1").innerHTML = will[0];
                             document.getElementById("willStats2").innerHTML = will[1];
                             document.getElementById("willStats3").innerHTML = will[2];
@@ -384,7 +398,7 @@
                         </div>
                         <script>
                             // William's modal player information
-                            var al = ["1.4 / 1", "Bolton Wanderers", "-£9.77", "£243", "2nd", "4th"];
+                            var al = ["1.4 / 1", "Bolton Wanderers", "£15.10", "£243", "2nd", "4th"];
                             document.getElementById("alStats1").innerHTML = al[0];
                             document.getElementById("alStats2").innerHTML = al[1];
                             document.getElementById("alStats3").innerHTML = al[2];
@@ -434,7 +448,7 @@
                         </section>
                         <script>
                             // William's modal player information
-                            var david = ["8 / 1", "Blackburn Rovers", "-£0.99", "£256", "Champion", "Fifth"];
+                            var david = ["8 / 1", "Blackburn Rovers", "-£16.24", "£267", "Champion", "Fifth"];
                             document.getElementById("davidStats1").innerHTML = david[0];
                             document.getElementById("davidStats2").innerHTML = david[1];
                             document.getElementById("davidStats3").innerHTML = david[2];
@@ -486,7 +500,7 @@
                         </section>
                         <script>
                             // William's modal player information
-                            var struan = ["14 / 1", "Brighton", "-£12", "£132", "3rd", "4th"];
+                            var struan = ["14 / 1", "Brighton", "£3.75", "£164", "3rd", "4th"];
                             document.getElementById("struanStats1").innerHTML = struan[0];
                             document.getElementById("struanStats2").innerHTML = struan[1];
                             document.getElementById("struanStats3").innerHTML = struan[2];
@@ -536,7 +550,7 @@
                         </section>
                         <script>
                             // William's modal player information
-                            var bingham = ["30 / 1", "Brighton", "-£14", "£142", "3rd", "6th"];
+                            var bingham = ["30 / 1", "Brighton", "£47.44", "£219", "3rd", "6th"];
                             document.getElementById("binghamStats1").innerHTML = bingham[0];
                             document.getElementById("binghamStats2").innerHTML = bingham[1];
                             document.getElementById("binghamStats3").innerHTML = bingham[2];
@@ -586,7 +600,7 @@
                         </section>
                         <script>
                             // William's modal player information
-                            var duffy = ["120 / 1", "Sheffield United", "-£14", "£217", "2nd", "5th"];
+                            var duffy = ["120 / 1", "Sheffield United", "-£30", "£217", "2nd", "5th"];
                             document.getElementById("duffyStats1").innerHTML = duffy[0];
                             document.getElementById("duffyStats2").innerHTML = duffy[1];
                             document.getElementById("duffyStats3").innerHTML = duffy[2];
@@ -715,8 +729,7 @@
         </a>
     </div>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxfXHGgV8V65RJ4LN1N8P8nG8YbXRhI5E&callback=initMap">
-    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxfXHGgV8V65RJ4LN1N8P8nG8YbXRhI5E&callback=initMap"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

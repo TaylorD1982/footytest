@@ -25,7 +25,7 @@ The buttons and graphs are designed to be colorful and easy to understand.</p>
 <p>Below are a number of scenarios, which demonstrate how a visitor to the site might navigate through the various sections.</p>
 
 <p><b>David</b> wants to see how this weekend’s football results have affected his standings in the table. He scrolls down to the league table, 
-which is the first element of the site, and sees that he is now in 3rd place.</p> 
+which is the first element of the site, and sees that he is now in 5th place.</p> 
 
 <p>He wants to see how he is performing in terms of wins this year and so clicks on the heading of the ‘wins’ column. The order of this column is re-sorted 
 allowing him to see how he ranks in that particular respect.</p>
@@ -34,7 +34,7 @@ allowing him to see how he ranks in that particular respect.</p>
 and is taken down to that section of the site.</p>
 
 <p>He selects his name from the 6 buttons and a modal pops up. He sees in the section 2019 / 2020 Season’ that his average odds for this year are 
-12/1 and his new favorite team (the team he selects the most often) is Newcastle United. While the modal is open, 
+26/1 and his new favorite team (the team he selects the most often) is Leeds United. While the modal is open, 
 he hovers his mouse over the image on the right hand side and is presented with a pop up that reminds him that he won the title in 2017 and 2019.</p>
 
 <p><b>Struan</b> notices an error in his total in the league table. In the navigation bar, he selects the option ‘Contact’ and is taken down to the bottom of the site. 
@@ -46,7 +46,7 @@ A pop-up confirms that he has selected this team on 3 occasions this year.</p>
 
 <p><b>Duffy</b> wants to see how the group as a whole is performing against the bookmakers this season. In the navigation bar, he selects ‘Group Statistics’ 
 and is taken down to that sections of the site. He sees that the second chart displays this information. The Vertical Axis tells him that the group is currently 
-£87.50 behind the bookmakers but that this is an improvement on two weeks ago, when the group were losing by £113.75.</p>
+£6.71 behind the bookmakers, an improvement on match day 11, when the group were losing by £77.86 in arrears.</p>
 
 <h2>Features</h2>
 
@@ -160,7 +160,7 @@ however there were a number of issues which I found broke the site. I have detai
 <p>There are a few differences in terms of layout between large and small screens and these are detailed below.<p> 
 
 <ul>
-<li>For The site's logo and the section headings, a different image is used depending on the screen width, with the other image hidden.<li> 
+<li>For The site's logo and the section headings, a different image is used depending on the screen width, with the other image hidden.</li> 
 <li>The padding on either side of the site's content is larger when viewed in bigger screen sizes.</li>
 <li>In smaller screens the navigation bar collapses into a burger.</li>
 <li>In smaller screens, the charts are all on top of each other, whereas in larger screens they are 2 side-by-side.</li>

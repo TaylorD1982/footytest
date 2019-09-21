@@ -1,3 +1,5 @@
+// Javascript for the contact form
+
 function sendMail(contactForm) {
     emailjs.send("gmail", "football_site", {
         "from_name": contactForm.name.value,
@@ -12,7 +14,7 @@ function sendMail(contactForm) {
             console.log("bad", error);
         }
     );
-    return false;  // To block from loading a new page
+    return false;
 }
 
 

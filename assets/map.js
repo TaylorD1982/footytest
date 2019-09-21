@@ -1,3 +1,5 @@
+        // Javascript for the map
+        
         var map;
         var all = [
             { "name": 'David, Blackburn Rovers, Selected 2 times', "lat": 53.7286, "lng": -2.488, "status": 'David' }, //Blackburn
@@ -36,10 +38,6 @@
 
             { "name": 'Duffy, Sheffield Utd, Selected 2 times', "lat": 53.3703, "lng": -1.470, "status": 'Duffy' }, //Shefield Utd
             { "name": 'Duffy, Raith Rovers, Selected 2 times', "lat": 56.0999, "lng": -3.169, "status": 'Duffy' }, //Raith
-
-
-
-
         ];
         var markers = [];
 
